@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax : 사용법</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                url:'load4.json',
+//                async:true,
+//                cache:true,
+//                type: 'post',
+//                data: src,
+                dataType:'json',
+                success: function(e) {
+                    console.log('success');
+                    console.log(e[0],e.length);
+                    var maketag = "";
+                    for(var i =0 ; i < e.length ; i++){
+                        maketag+='<li> 프로그램은 : '+e[i].program+', 프로그램 나이는 :'+e[i].age+'</li>';
+                    }
+                    $('body').append('<ul id="mamber">'+maketag+'</ul>')
+                },
+                error: function(e) {
+                    console.log('error');
+                }
+            });
+        });
+
+    </script>
+    <style type="text/css">
+        body {margin: 0;padding: 0}
+        h1{text-align: center}
+        #mamber {font-size: 20px;font-weight: 700;margin-top: 20px}
+        #mamber li{margin-top: 20px}
+    </style>
+</head>
+
+<body>
+    <h1>JSON &amp; AJAX 사용법</h1>
+</body>
+
+</html>

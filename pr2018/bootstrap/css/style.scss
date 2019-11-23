@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@font-face{
+    font-family:"NBG";
+    src: url("../fonts/NanumBarunGothic.eot");
+    src: local("※"), url("../fonts/NanumBarunGothic.woff") format("woff");
+}
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+
+@mixin no_deco(){
+    text-decoration: none
+}// mixin use , you respon @include mixin name 
+@mixin out_line($num,$color){
+    outline: $num dotted $color;
+}
+@mixin padTB($size){
+    padding-top: $size;
+    padding-bottom: $size;
+}
+@mixin padLR($size){
+    padding-left: $size;
+    padding-right: $size;
+}
+@mixin boderRD($size){
+    border-radius:$size;
+    -webkit-border-radius:$size;
+    -moze-border-radius:$size;
+}
+@mixin tr($s,$attr){
+    transition: $s $attr;
+    -o-transition: $s $attr;
+    -webkit-transition: $s $attr;
+}
+@mixin op($num){
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity='+($num*100)+')';
+    opacity: $num;
+}
+@mixin trform($x,$y){
+    -webkit-transform: translate($x,$y);
+    -moz-transform: translate($x,$y);
+    -o-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform: translate($x,$y);
+}
+$orange : #ff5800;
+
+// face control
+.fadein{@include op(0);@include tr(1s,all)}
+.fadein.on{@include op(1)}
+.fadein[data-fadein="left"]{@include trform(-70px,0)}
+.fadein[data-fadein="right"]{@include trform(70px,0)}
+.fadein[data-fadein="up"]{@include trform(0,-70px)}
+.fadein[data-fadein="down"]{@include trform(0,70px)}
+.fadein.on{@include trform(0,0)}
+
+//body control
+
+body{font-family:"NBG";overflow-x: hidden}
+body > .container-fluid {padding: 0}
+
+//skip control
+
+#skip{
+    position: absolute;top:0;left: -9999px;background: #bababa;height: 60px;width: 100%;text-align: center;
+    font-size: 40px;line-height: 60px;z-index: 2000;@include no_deco();
+    &:focus{
+        left: 0;
+    }
+}
+
+//header 
+#header .navbar-default{background: #fff;height: 90px;
+    .log{
+        font-size: 0;
+        margin: 0;
+        a img{
+             height: 50px;width: auto}
+            }
+        a {padding-top: 20px}
+        .navbar-toggle{margin-top: 28px}
+        .navbar-collapse{background-color: #fff;
+            .active>a,a:hover,a:focus{
+                background-color:#fff;
+                color: $orange;
+            }
+    }
+    #gnb{
+        padding-top: 30px;font-size: 18px
+    }
+}
+
+//content
+
+#content{
+    
+    article > .container,article header{@include padTB(100px)}
+    article > .container-fluid{padding-left: 0;padding-right: 0}
+    article header{@include padLR(15px)}
+    h5{font-size: 24px}
+    
+    article header {background:url("../images/slide1_bg.jpg") no-repeat fixed center;text-align: center;
+        .title{font-size: 24px;color: #fff;font-weight: 500}
+        strong{display: block;margin-top: 20px;margin-bottom: 10px}
+        p{color: #C0C0C0;font-size: 14px}
+    }
+    #Home{
+        #myCarousel{
+            .carousel-indicators{bottom: 0;margin-bottom: 0;
+                li{text-indent: -9999px;position: relative}
+                li a{width: 100%;height: 100%;position: absolute;top:0;left: 0}
+                li a:focus{@include out_line(2px,#c6c6c6)}
+            }           
+            a:focus span{@include out_line(2px,#c6c6c6)}
+        }
+        >.container{
+            .row div a{display: block;height: 100%}
+            .row div a div:first-child{text-align: center;margin-top: 15px;margin-bottom: 15px;
+                span{padding: 20px;background: $orange;@include boderRD(100%);font-size: 30px;color: #fff;                border: 3px solid $orange;display: inline-block} 
+            } 
+            .row div a:hover div:first-child span,.row div a:focus div:first-child span{background-color: rgb(221, 54, 0)}
+            .row div a div:last-child{color: #555;text-align: center} 
+            .row div a div:last-child strong{display: inline-block;font-size: 20px;@include padTB(10px);font-family: 'Source Sans Pro'} 
+            .row div a div:last-child p{text-align: left} 
+        }
+    }
+    #Home{padding-top: 90px}
+    #About .container{ 
+        .main_txt{
+            line-height: 1.8;font-size: 15px;padding-bottom: 20px;border-bottom: 1px solid #ccc;margin-bottom: 20px
+        }    
+        .panel-default>.panel-heading{background-color: #fff}
+        #book img{margin-left: -100px;vertical-align: top}
+        #book img:first-child{margin-left:0px}
+    }
+    #SQF{padding: 0 15px;
+        div:first-child{padding-bottom: 20px}
+    }
+    #conAD p span{padding-right: 10px}
+}
+
+// footer
+#footer{background:url("../images/slide1_bg.jpg") no-repeat fixed center;
+    .container{@include padTB(20px);
+    .title{color: #fff;font-weight: 500}
+    }
+}
+@media all and (min-width: 992px){
+    #content #About .container #book img{margin-left: -140px}  
+}
+@media all and (min-width: 1200px){
+    #content #About .container #book img{margin-left: -100px}  
+}
+@media all and (min-width:769px){
+       #header .navbar-default a {padding-top:13px}
+       #header .navbar-default .log a img{height: 65px;width: auto}
+}
+@media all and (max-width:769px){
+        #header .navbar-default #gnb{padding-top: 0px;font-size: 14px}
+}
+@media all and (min-width:575px) and (max-width: 687px){
+    .letter24{letter-spacing: -2px}
+}
+@media all and (min-width:320px) and (max-width: 540px){
+    #content article header,#content article > .container{@include padTB(40px)}
+    #content{
+        #Home{
+            >.container{
+                .row div a div:last-child{display: none} 
+                .row div a div:first-child{width: 100%} 
+            }
+        }
+        #Contact{
+            #conAD{padding-left: 0;padding-right: 0}
+        }
+        #SQF{padding: 0 15px}
+        #About .container #book img{width: 40%;height: auto;margin-left: -100px}
+    }
+}
+#content #About .container #book img:first-child{margin-left:0px}

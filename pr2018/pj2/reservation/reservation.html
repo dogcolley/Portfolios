@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>예약하기</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub3.css">
+    <link rel="icon" href="../images/common/icon.png">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/sub3.js"></script>
+</head>
+
+<body>
+    <div id="skipnav"><a href="#snb">본문 바로가기</a></div>
+    <header id="header" class="center">
+        <h1 id="tit">
+            <a href="/pj2/index.php">
+                <img alt="Whale Resort" width="175" height="105" src="../images/common/main_log.png">
+            </a>
+        </h1>
+        <a id="btnQ" href="#" target="_blank">예약확인</a>
+        <button id="btnM" type="button">몌뉴열기</button>
+    </header>
+
+    <div id="menuModal">
+        <?php include("../include/modalMenu.php"); ?>
+    </div>
+
+    <section id="content" class="reservation">
+        <div id="reserSnb" class="clear">
+            <h2>예약하기</h2>
+            <strong class="blind">에약 단계</strong>
+            <ul>
+                <li class="on">날짜&amp;룸 선택</li>
+                <li>홈&amp;부가 서비스</li>
+                <li>약관&amp;결재진행</li>
+                <li>예약 완료</li>
+            </ul>
+        </div>
+        <div class="area">
+            <article id="cnt1">
+                <h3 class="blind">현재 진행 단계 날짜&amp;룸 선택</h3>
+                <div id="calendar">
+                    <h4 class="blind">날짜 선택</h4>
+                    <div>
+                        <div>
+                            <label for="CSY">년</label>
+                            <select id="CSY" name="CSY">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                        </div>
+                        <div>
+                            <label for="CSM">월</label>
+                            <select id="CSM" name="CSM">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option><!-- 스크립트 제어-->
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                        </div>
+                        <button type="button" class="prev">이전달</button>
+                        <button type="button" class="next">다음달</button>
+                    </div>
+
+                    <table id="nowCalendar">
+                        <caption class="blind"></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">일</th>
+                                <th scope="col">월</th>
+                                <th scope="col">화</th>
+                                <th scope="col">수</th>
+                                <th scope="col">목</th>
+                                <th scope="col">금</th>
+                                <th scope="col">토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="room">
+                    <h4 class="blind">룸선택</h4>
+                    <ul class="room">
+                        <li class="list1">
+                            <h5>돌핀: 원룸<strong class='Room_money'>55000원</strong></h5>
+                            <!-- 수정 -->
+                            <div class="room_rescue">
+                                <strong>[객실형태]</strong>
+                                <ul>
+                                    <li>침실 1</li>
+                                    <li>옥실 1</li>
+                                    <li>주방 1</li>
+                                </ul>
+                            </div>
+                            <ul class="layer_rescue">
+                                <li>
+                                    <button type="button">층</button>
+                                    <span>F5</span>
+                                    <ul>
+                                        <li><button type="button">F5</button></li>
+                                        <li><button type="button">F6</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button">호</button>
+                                    <span>501</span>
+                                    <ul>
+                                        <li><button type="button">501</button></li>
+                                        <li><button type="button">502</button></li>
+                                        <li><button type="button">503</button></li>
+                                        <li><button type="button">504</button></li>
+                                        <li><button type="button">505</button></li>
+                                        <li><button type="button">506</button></li>
+                                        <li><button type="button">507</button></li>
+                                        <li><button type="button">508</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button type="button">선택</button>
+                        </li>
+                        <li class="list2">
+                            <h5>오르카: 투룸 <strong class='Room_money'>89000원</strong></h5>
+
+                            <div class="room_rescue">
+                                <strong>[객실형태]</strong>
+                                <ul>
+                                    <li>침실 2</li>
+                                    <li>옥실 1</li>
+                                    <li>주방 1</li>
+                                </ul>
+                            </div>
+                            <ul class="layer_rescue">
+                                <li>
+                                    <button type="button">층</button>
+                                    <span>F3</span>
+                                    <ul>
+                                        <li><button type="button">F3</button></li>
+                                        <li><button type="button">F4</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button">호</button>
+                                    <span>301</span>
+                                    <ul>
+                                        <li><button type="button">301</button></li>
+                                        <li><button type="button">302</button></li>
+                                        <li><button type="button">303</button></li>
+                                        <li><button type="button">304</button></li>
+                                        <li><button type="button">305</button></li>
+                                        <li><button type="button">306</button></li>
+                                        <li><button type="button">307</button></li>
+                                        <li><button type="button">308</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button type="button">선택</button>
+                        </li>
+                        <li class="list3">
+                            <h5>웨일 :VIP룸 <strong class='Room_money'>128000원</strong></h5>
+                            <div class="room_rescue">
+                                <strong>[객실형태]</strong>
+                                <ul>
+                                    <li>침실 1</li>
+                                    <li>옥실 1</li>
+                                    <li>주방 1</li>
+                                </ul>
+                            </div>
+                            <ul class="layer_rescue">
+                                <li><button type="button">층</button>
+                                    <span>F7</span>
+                                </li>
+                                <li>
+                                    <button type="button">호</button>
+                                    <span>701</span>
+                                    <ul>
+                                        <li><button type="button">701</button></li>
+                                        <li><button type="button">702</button></li>
+                                        <li><button type="button">703</button></li>
+                                        <li><button type="button">704</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button type="button">선택</button>
+                        </li>
+                    </ul>
+                    <h4>[이용시 주의사항]</h4>
+                    <ul class="precautions">
+                        <li>ㅁ 입실 및 퇴실시간은 반드시 지켜주세요.</li>
+                        <li>ㅁ 미성년자는 법적동의없이 입실 및 혼숙이 불가합니다.</li>
+                        <li>ㅁ 애완동물과 함께 입실하실 수 없습니다. 위반 시 환불이 불가하며 퇴실조치 됩니다</li>
+                        <li>ㅁ 개인소지품 분실시 펜션은 책임지지 않습니다. 꼭 중요한 개인소지품을 잘 보관해주세요</li>
+                        <li>ㅁ 집기파손 시 파손 물품은 변상의 책임이 있습니다. 실구입가 기준으로 변상을 해야하니 주의부탁드립니다.</li>
+                    </ul>
+                </div>
+                <button type="button" id="next1">다음단계</button>
+            </article>
+
+            <article id="cnt2">
+                <h3 class="blind">현재 진행 단계 부가서비스</h3>
+                <div class="service1">
+                    <h4>홈 &amp; 부가 서비스</h4>
+                    <div>
+                        <h5>와인 서비스</h5>
+                        <ul id="sv1M1">
+                            <li data-money="98000"><span>Fields of Joy Shiraz 2014<span class="blind">가격</span> 98000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="68000"><span>Springfied<span class="blind">가격</span> 68000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="231000"><span>Nocturne City Light<span class="blind">가격</span> 231,000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="880000"><span>Dauby<span class="blind">가격</span> 88000원</span><button type="button" class="i_add">선택</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>스페셜 입욕제</h5>
+                        <ul id="sv1M2">
+                            <li data-money="38000"><span>보드림 입욕제 <span class="blind">가격</span> 38000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="58000"><span>남일 통상 입욕제<span class="blind">가격</span> 58000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="98000"><span>가오규레루 입욕 제<span class="blind">가격</span> 98000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="246000"><span>피토메르 올리고머 입욕제<span class="blind">가격</span> 246000원</span><button type="button" class="i_add">선택</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>바베큐 서비스</h5>
+                        <ul id="sv1M3">
+                            <li data-money="70000"><span>바베큐 존 일<span class="blind">가격</span> 70000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="20000"><span>웨일 미트 set 1인<span class="blind">가격</span> 20000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="28000"><span>웨일 피쉬 set 1인<span class="blind">가격</span> 28000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="38000"><span>웨일 모듬 set 1인<span class="blind">가격</span> 38000원</span><button type="button" class="i_add">선택</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>시설 서비스</h5>
+                        <ul id="sv1M4">
+                            <li data-money="70000"><span>웨일 골프존 일 프리권<span class="blind">가격</span> 70000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="68000"><span>웨일 마사지 풀 서비스<span class="blind">가격</span> 68000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="98000"><span>웨일 레스토랑 디너코너(1인)<span class="blind">가격</span> 98000원</span><button type="button" class="i_add">선택</button></li>
+                            <li data-money="10000"><span>웨일 PC ZONE 일일 무재한<span class="blind">가격</span> 10000원</span><button type="button" class="i_add">선택</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service2">
+                    <h4>이벤트</h4>
+                    <ul>
+                        <li class="ev1">
+                            <h5>불꽃 축제</h5>
+                            <div>
+                                <span data-money="58000">1인 기준 : 58000원</span>
+                                <a href="#" target="_blank">이벤트 상세 보기</a>
+                                <button type="button" class="i_add">선택</button>
+                            </div>
+                        </li>
+                        <li class="ev2">
+                            <h5>수영장 파티</h5>
+                            <div>
+                                <span data-money="28000">1인 기준 : 28000원</span>
+                                <a href="#" target="_blank">이벤트 상세 보기</a>
+                                <button type="button" class="i_add">선택</button>
+                            </div>
+                        </li>
+                        <li class="ev3">
+                            <h5>맥주 축제</h5>
+                            <div>
+                                <span data-money="28000">1인 기준 : 28000원</span>
+                                <a href="#" target="_blank">이벤트 상세 보기</a>
+                                <button type="button" class="i_add">선택</button>
+                            </div>
+                        </li>
+                        <li class="ev4">
+                            <h5>저녁 음악회</h5>
+                            <div>
+                                <span data-money="37000">1인 기준 : 37000원</span>
+                                <a href="#" target="_blank">이벤트 상세 보기</a>
+                                <button type="button" class="i_add">선택</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service3">
+                    <h4>쿠폰입력</h4>
+                    <input type="text" id="QF">
+                    <button type="button">쿠폰 번호확인</button>
+                </div>
+                <button type="button" id="next2">다음단계</button>
+            </article>
+
+            <article id="cnt3">
+                <h3 class="blind">현재 진행단계 개인정보 결제진행</h3>
+                <form action="" method="post" name="uData" id="uData">
+                    <div class="select_room">
+                        <h4>선택 정보</h4>
+                        <div>
+                            <div>
+                                <label for="checkIn" class="list1">체크인</label>
+                                <input type="text" id="checkIn" name="checkIn" readonly>
+                            </div>
+                            <div>
+                                <label for="checkOut" class="list2">체크아웃</label>
+                                <input type="text" id="checkOut" name="checkOut" readonly>
+                            </div>
+                            <div>
+                                <label for="room">선택 룸</label>
+                                <input type="text" id="ch" readonly>
+                            </div>
+                            <div>
+                                <h5>부가서비스 : 합계 금액</h5>
+                                <div>
+                                    <!-- 토탈 금액을 input 태그로 생성-->
+                                </div>
+                            </div>
+                        </div>
+                        <p>객실 예약후 결제 환불은 7일전 까지 받고있습니다.<br>기한이 7일 미만이 남을경우엔 전액 환불이 어렵습니다</p>
+                        <label for="agree">상단의 선택정보와 개인정보 수집동의 결제금액대한 사항을 동의합니다.</label>
+                        <input type="radio" name="agree" id="agree" value="agree">
+                    </div>
+                    <div class="left_box">
+                        <div class="u_data">
+                            <h4>개인 정보입력</h4>
+                            <div>
+                                <label for="UN">성명</label>
+                                <input type="text" id="UN" name="UN">
+                            </div>
+                            <div>
+                                <label for="UAD">주소</label>
+                                <input type="text" id="UAD">
+                            </div>
+                            <div>
+                                <label for="UPH">휴대 번호</label>
+                                <input type="tel" id="UPH">
+                            </div>
+                        </div>
+                        <div class="payment">
+                            <h4>결제 방법</h4>
+                            <button type="button">결재 방법 선택</button>
+                            <ul>
+                                <li><button type="button">kakao결제</button></li>
+                                <li><button type="button">naver결제</button></li>
+                                <li><button type="button">계좌 입금</button></li>
+                            </ul>
+                            <div>
+                                <h5>선택한 결재방법</h5>
+                                <div>
+                                    <!-- 선택한 사항에 따른 결재 동의 내용이 동적으로 생성됩니다. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="reset">다시입력</button>
+                    <button type="submit" id="next3">예약하기</button>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="area">
+            <address>회원/예약문의 :02-3777-2100</address>
+            <p>웨일리조트 :부산시 해운대구 송정구덕포길 130 송정 웨일리조트</p>
+            <p>WHALE BY SERVEONE., LTD. ALL RIGHTS RESERVED 대표이사 :흰수염</p>
+        </div>
+    </footer>
+</body>
+
+</html>

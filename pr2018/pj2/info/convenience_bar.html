@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> 레스토랑 &amp; 바 : 편의시설 </title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub1.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/sub1.js"></script>
+    <script>
+        $(document).ready(function() {
+            function conveniBar() {
+                var $mainBg = $('#main_bg');
+                var top = $mainBg.offset().top;
+
+
+                $(window).on("scroll", function() {
+                    var scrollT = $(this).scrollTop();
+                    if (scrollT > top) $mainBg.children().fadeOut();
+                    else $mainBg.children().fadeIn();
+                    //console.log(scrollT)
+
+                    var $fade = $(".fade")
+                    var scrollY = $(this).scrollTop();
+
+                    $fade.each(function() {
+                        if (scrollY > $(this).offset().top - 500) $(this).addClass('on')
+                        else $(this).removeClass('on')
+                    });
+                });
+            }
+            conveniBar()
+        })
+    </script>
+</head>
+
+<body id="page0_0">
+    <div id="skipnav"><a href="#snb">본문 바로가기</a></div>
+    <header id="header" class="center">
+        <?php include("../include/subheader.php"); ?>
+    </header>
+
+    <div id="menuModal">
+        <?php include("../include/modalMenu.php"); ?>
+    </div>
+
+    <section id="content">
+        <div id="snb" class="clear">
+            <h2>편의시설</h2>
+            <ul>
+                <li><a href="">헬스장</a></li>
+                <li class="on"><a href="">레스토랑&amp;Bar</a></li>
+                <li><a href="">골프장</a></li>
+                <li><a href="">수영장</a></li>
+                <li><a href="">카지노</a></li>
+            </ul>
+        </div>
+
+        <article class="main_img" id="main_bg">
+            <div class="bg">
+                <h3>레스토랑&amp;Bar</h3>
+                <p>한식, 일식, 양식 등 다양한 맛과 <br> 최고의 요리를 웨일에서 즐겨보세요.</p>
+            </div>
+        </article>
+
+        <div class="area">
+
+            <article class="sub_img1">
+                <img class="fade" src="../images/sub/resort_bar_img_02.jpg" alt="조리사가 음식을 만드는">
+                <div class="txt fade">
+                    <h4>운영시간</h4>
+                    <p>조식뷔페 : 07:00 ~ 10:30 <br> 디너뷔페 : 18:00 ~ 21:00</p>
+                    <strong>이용요금</strong>
+                    <p>17,500원 (VAT 포함)</p>
+                </div>
+
+            </article>
+
+            <article class="sub_img2">
+                <div class="txt fade">
+                    <h4>주요메뉴</h4>
+                    <p><span class="tit1">특선메뉴</span> : 흑돼지 BBQ 스테이크, Kids 돈까스 콤보 <br> <span class="tit">샐러드</span> : 가든 그린 샐러드, 풍기 샐러드, 탄두리 치킨 샐러드 <br> <span class="tit">우동 &amp; 돈까스</span> : 올레 우동, 일본식 수제 돈까스 <br> <span class="tit">화덕피자</span> : 올레 피자(고르곤졸라), 초기 피자(버섯), 디아볼라 피자(페페로니), 애플 피자, 파인애플 피자 <br> <span class="tit">파스타</span> : 해산물 토마토 스파게티, 해산물 크림 스파게티, 쉬림프 로제 스파게티, 까르보나라 스파게티 <br> <span class="tit2">룸서비스</span> : 올레 피자, 초기 피자, 디아볼라 피자, 버팔로 윙, 올레 수제 돈까스 안주, 치킨 텐더, 감자 튀김, 풍기 샐러드, 탄두리 치킨 샐러드</p>
+                </div>
+                <img class="fade" src="../images/sub/resort_bar_img_01.jpg" alt="레스토랑 을 한눈에 담은">
+            </article>
+
+            <article class="cover">
+                <div class="txt fade">
+                    <h4>가족끼리 때로는 연인끼리 <br> 행복한 여행에서 즐기는 <br> 특별한 추억을 만들어 보세요~ <br> 깨끗하고 정갈한 맛에서 느껴지는 행복감, <br> 웨일 레스토랑이 정성스럽게 준비한 <br> 맛의 향연을 즐길 수 있습니다.</h4>
+                </div>
+            </article>
+
+            <article class="rest_bar">
+                <!-- 슬라이드 -->
+                <h3></h3>
+                <div id="banner">
+                    <div class="visual">
+                        <ul>
+							<li class="list1"><img width="360" height="360" src="../images/sub/resort_bar_img_05.jpg" alt=""></li>
+                            <li class="list2"><img width="360" height="360" src="../images/sub/resort_bar_img_01.jpg" alt="서양식의 푸짐한 조식"></li>
+                            <li class="list3"><img width="360" height="360" src="../images/sub/resort_bar_img_02.jpg" alt="조리사가 음식을 만드는"></li>
+                            <li class="list4"><img width="360" height="360" src="../images/sub/resort_bar_img_03.jpg" alt="레스토랑 을 한눈에 담은"></li>
+                            <li class="list5"><img width="360" height="360" src="../images/sub/resort_bar_img_04.jpg" alt="맛있는 비빔밥 정식"></li>
+                            <li class="list6"><img width="360" height="360" src="../images/sub/resort_bar_img_05.jpg" alt="한식의 간단한 조식"></li>
+                        </ul>
+                    </div>
+                    <div class="prev_next">
+                        <button class="prev" type="button">이전</button>
+                        <button class="next" type="button">다음</button>
+                    </div>
+					<div class="white_mask m1"></div>
+					<div class="white_mask m2"></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <?php include("../include/footer.php"); ?>
+    </footer>
+</body>
+
+</html>

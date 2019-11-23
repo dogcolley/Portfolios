@@ -1,0 +1,43 @@
+﻿sever:응답자 <=> client:요청자 
+
+sever apache php python java mysql = sever 를 구성하는 부품
+모두 연결시켜주는것은 프레임
+
+(ex:apache iis nginx)web sever (url: 보내줄게 url) <=>(ex:ie crom ff sa o)web clinet (url: 요청)
+
+20년전 html의 한계를 넘기 위해 개발 > CGI : 통신규약 약속 
+
+web ! internet 
+
+php: hypertext preprocessor : perl > c언어  
+
+web hosting : 제약이 없다. 쉽다. 진입점으로 매우 쉽다.
+php > wikipia / facebook : 등이 사용 
+
+웹 브라우저 < = > 웹서버 <=> php <=> FILE
+
+퍼블리셔들이 html만으로 제작하는 서버의 단점
+: 여러가지의 파일을 수제작하여 하나하나 만들어준다.
+
+기본적인 구성을 html로 만들어 주고 안에 들어가는 txt는 따로 저장해준다.
+
+a.com/index.php?id=1 로 index.php < 1.txt 2.txt 3.txt의 인덱스 php안에 txt를 불러와준다.
+> 흔히 편하게 사용하는 방법은 인크루드 방법이 있습니다.
+> 하지만 좋지않음
+
+a.com/index.php?id=1 로 index.php < DATABASE  자장된 데이터를 불르거나 저장을 해준다.
+> 근대화에서 사용하는 방법입니다.
+> 여러가지의 장점이 생깁니다.
+
+<?php
+echo $_GET['id];
+?>
+
+<?php
+echo file_get_contents("file의 경로");
+?>
+
+
+
+
+

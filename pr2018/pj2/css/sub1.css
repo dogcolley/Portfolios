@@ -1,0 +1,118 @@
+@charset "utf-8";
+/************************* convenience 편의시설***************************/
+#convenience{background: url("../images/sub/convenience_bg.jpg") no-repeat 50% 50%;background-size: cover;height: 1000px;}
+#convenience .main_txt{width: 1021px;height: 200px;line-height: 2;text-align: center;color: #fff;background: rgba(0, 0, 0, 0.5);position: absolute;top: 50px;left: 50%;margin-left: -510px;}
+#convenience .main_txt h3{font-size: 40px}
+#convenience .main_txt p{margin-top:-15px;font-size: 24px}
+#convenience .infoImg .box{width: 220px;height: 230px;position: absolute;top: 500px;left: 0;background: #fff;text-align: center;transition: 0.5s all;opacity:0;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';}
+#convenience .infoImg .box a{display: block;margin:10px 0;font-size: 18px;font-weight: 700;transition: 0.3s all;height: 20px;;box-sizing: border-box}
+#convenience .infoImg .box a:focus, #convenience .infoImg .box:hover{letter-spacing: 10px;background: rgba(0, 0, 0, 0.68);color: #fff}
+#convenience .infoImg .box:hover{transform: scale(1.1)}
+#convenience .infoImg .list1{top: 350px;left: 0;}
+#convenience .infoImg .list2{top: 350px;left: 600px;}
+#convenience .infoImg .list3{top: 350px;left: 1200px;}
+#convenience .infoImg .list4{top: 650px;left: 200px;}
+#convenience .infoImg .list5{top: 650px;left: 1000px;}
+
+
+
+
+/**************************** rest_bar 식당소개**********************************/
+#content #main_bg{text-align: center;background: url("../images/sub/resort_bar_bg01.jpg") no-repeat 50% 50%;background-size: cover;height: 250px;color: #fff;font-weight: 700}
+#content #main_bg .bg{background: rgba(0, 0, 0, 0.5);width: 500px;margin: 0 auto; position: absolute; top: 12%;left: 50%;margin-left: -250px}
+#content #main_bg h3{font-size: 24px;padding: 50px 0 50px}
+#content #main_bg p{font-size: 18px;padding-bottom: 50px;line-height: 2}
+#content article{position: relative;height: 400px;padding-top: 100px}
+#content article img.fade{width: 600px;height: auto}
+#content .sub_img1 img, #content .sub_img2 img{position: absolute;left: 50%;margin-left: -200px}
+#content article .txt{position: absolute;border: 5px solid #3e3e3e;top: 0;left: 0;text-align: center;width: 500px;height: 300px;}
+#content .sub_img1{height: 600px}
+#content .sub_img1 img{left: 0;z-index: 2;width: 360px;height: 360px;}
+#content .sub_img1 img.on{left: 550px;z-index: 2;width: 360px;height: 360px;}
+#content .sub_img1 .txt{top: 300px;left: 50%;line-height: 3;left: 850px}
+#content .sub_img1 .txt.on{left: 650px}
+#content article .txt h4, #content .sub_img1 .txt strong{font-size: 20px;font-weight: 900;line-height:3.5}
+#content .sub_img1 .txt h4{color: #117c0d}
+#content .sub_img1 .txt strong{color: olive}
+
+#content .sub_img2{height: 800px;}
+#content .sub_img2 img{left:1000px;width: 360px;height: 360px;}
+#content .sub_img2 img.on{left:800px;width: 360px;height: 360px;}
+#content .sub_img2 .txt{width: 680px;height: 300px;line-height: 2;top: 280px;left: 50%;margin-left: -900px;text-align: left;padding:30px;padding-bottom: 50px}
+#content .sub_img2 .txt h4{color: #098383}
+#content .sub_img2 .txt.on{left: 50%;margin-left: -650px}
+#content .sub_img2 p span.tit{font-size: 19px;font-weight: 700}
+#content .sub_img2 p span.tit1, #content .sub_img2 p span.tit2{font-size: 19px;font-weight: 700}
+#content .sub_img2 p span.tit1{color: #e06353}
+#content .sub_img2 p span.tit2{color: #133fb5}
+
+#content .cover{background: url("../images/sub/resort_bar_bg02.jpg") no-repeat fixed 50% 70%;background-size: cover;width: 1400px;height: 500px}
+#content .cover .txt{left: 200px;height: 430px;background: rgba(0, 0, 0, 0.63);color: #fff;line-height: 2;border: none;font-size: 20px;top: 80px}
+#content .fade{opacity:0;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';transition:all 1s}
+#content .fade.on{opacity:1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
+
+#content .rest_bar{height: 450px;margin-top: 150px}
+#content .rest_bar #banner{position: relative;overflow: hidden}
+#content .rest_bar .visual{width: 1400px;height: 300px}
+#content .rest_bar .visual ul{position: absolute;top: 0;left: 0;width: 3000px;}
+#content .rest_bar .visual ul li{float: left;width: 300px;height: 300px;overflow: hidden;margin: 0 100px}
+#content .rest_bar .visual ul .list1{margin-left: 50px}
+#content .rest_bar .visual ul li img{width:360px;height:360px;transition:transform 0.5s}
+#content .rest_bar .visual ul li:hover img{transform:scale(1.2)}
+/* 버튼 디자인 다시 하시구요 */
+#content .rest_bar .prev_next{position: absolute;top: 0;left: 50%;}
+#content .rest_bar .prev, #content .rest_bar .next{width: 50px;height: 50px;position: absolute;background: black no-repeat;border-radius: 25px;font-size: 0;top: 120px;}
+#content .rest_bar .prev{margin-left: -280px;background-image: url(../images/sub/banner_prev.png)}
+#content .rest_bar .next{margin-left: 225px;background-image: url(../images/sub/banner_next.png)}
+#content .rest_bar .prev:hover, #content .rest_bar .prev:focus{background-image: url(../images/sub/banner_prev_on.png);background-color: rgba(255, 255, 255, 0)}
+#content .rest_bar .next:hover, #content .rest_bar .next:focus{background-image: url(../images/sub/banner_next_on.png);background-color: rgba(255, 255, 255, 0)}
+
+#content .rest_bar .white_mask{position:absolute;top:0px;width:400px;height:300px;background:rgba(255,255,255,0.6)}
+#content .rest_bar .white_mask.m1{left:0px;}
+#content .rest_bar .white_mask.m2{right:0px;}
+
+/**************************** night 야경****************************/
+#night{background: url("../images/sub/working_bg_img.jpg") no-repeat 50% 50%;background-size: cover;height: 1500px;}
+#night .area{height: 1500px;}
+#night .info_txt{width: 184px;height: 184px;border-radius: 50%;position: absolute;top: 45%;left: 50%;text-align: center;background: #fff;margin-left: -90px;z-index: 3}
+#night .info_txt h3{margin-top: 38px;font-size: 30px;font-family: 'NS_B';margin-left: 10px;line-height: 2}
+#night .line_wrap{display: none}
+#night .line_wrap p{position: absolute;height: 1px;width: 500px;background: #656565}
+#night .line_wrap .line01{top: 520px;left: 100px;transform: rotate(40deg);width: 700px;}
+#night .line_wrap .line02{top: 750px;left: 400px;width: 200px;}
+#night .line_wrap .line03{top: 980px;left: 200px;transform: rotate(140deg)}
+#night .line_wrap .line04{top: 1050px;left: 480px;transform: rotate(90deg);width: 450px;}
+#night .line_wrap .line05{top: 990px;left: 700px;transform: rotate(40deg)}
+#night .line_wrap .line06{top: 750px;left: 600px;}
+#night .line_wrap .line07{top: 500px;left: 600px;transform: rotate(130deg);width: 600px;}
+
+#night .circle_wrap li a{position: absolute;display: block;text-align: center;border-radius: 50%;width: 0;height: 0;top: 40%;left: 40%;overflow: hidden}
+#night .circle_wrap .circle01 a{background-image: url("../images/sub/working_img01.jpg");z-index: 2}
+#night .circle_wrap .circle02 a{background-image: url("../images/sub/working_img02.jpg");z-index: 2}
+#night .circle_wrap .circle03 a{background-image: url("../images/sub/working_img03.jpg");z-index: 2}
+#night .circle_wrap .circle04 a{background-image: url("../images/sub/working_img04.jpg");z-index: 2}
+#night .circle_wrap .circle05 a{background-image: url("../images/sub/working_img05.jpg");z-index: 2}
+#night .circle_wrap .circle06 a{background-image: url("../images/sub/working_img06.jpg");z-index: 2}
+#night .circle_wrap .circle07 a{background-image: url("../images/sub/working_img07.jpg");z-index: 2}
+
+#night .circle_wrap li a .cir{position: absolute;top: 50%;left: 50%;border-radius: 50%;width: 80px;height: 80px;margin-left: -40px;margin-top: -40px;font-size: 18px;background: #fff;text-align: center;line-height: 20px}
+
+#night .circle_wrap li a .txt_cir{position: absolute;width: 100px;left: 50%;margin-left: -50px;height: 40px;top:50%;margin-top: -20px;font-size: 16px;font-weight: 700}
+#night .circle_wrap .circle01 a .txt_cir{margin-top: -12px}
+#night .circle_wrap .circle07 a .txt_cir{margin-top: -12px}
+
+#mask, .modal_cnt{display: none;position: fixed;z-index: 110}
+#mask{top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.6)}
+.modal_cnt{background: #aaa;overflow: hidden}
+#modal1{width: 900px;height: 700px;}
+
+.modal_cnt .slider, .modal_cnt .slider .visual li{width: 100%;height: 700px;}
+.modal_cnt .slider .visual{overflow: hidden;width: 900px;height: 700px;}
+.modal_cnt .slider .visual  li{position: absolute;background: #000; color: #fff;text-align: center}
+.modal_cnt .slider .visual .list2, .modal_cnt .slider .visual .list3{left: 100%;}
+.modal_cnt .slider .visual  li h3{padding:10px 0}
+.modal_cnt .slider .visual  li p{line-height: 1.5}
+.modal_cnt .slider .prev_next .prev{margin-right: 30px;margin-left: 20px;position: absolute;top: 25px;left: 25px;}
+.modal_cnt .slider .prev_next .next{position: absolute;top: 25px;left: 125px;}
+.modal_cnt .close_btn{position: absolute;top: 25px;right: 25px;}
+.modal_cnt .slider .prev_next .prev,.modal_cnt .slider .prev_next .next, .modal_cnt .close_btn{background: #aaa;border: 1px solid #000;box-sizing: border-box;padding: 5px}

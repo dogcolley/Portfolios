@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi">
+    <title>기업소개 &lt; 기업정보 &lt; 회사소개</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/respond.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var shiftOn = false;
+            $(window).on('keydown', function(e) {
+                if (e.keyCode == 16) shiftOn = true;
+            });
+            $(window).on('keyup', function(e) {
+                if (e.keyCode == 16) shiftOn = false;
+            });
+
+            $('#gnb>ul>li').on('mouseenter focusin', function() {
+                $(this).find('ul').show().end().addClass('on')
+                $('#header').css({
+                    borderBottom: "2px solid #333"
+                }).stop().animate({
+                    paddingBottom: 43
+                })
+            });
+
+            $('#gnb>ul>li').on('mouseleave', function() {
+                $(this).find('ul').hide().end().removeClass('on')
+                $('#header').css({
+                    borderBottom: "none"
+                }).stop().animate({
+                    paddingBottom: 26
+                })
+            });
+
+            $('#gnb>ul>li>a').on('keydown', function(e) {
+                if (e.keyCode == 9 && shiftOn) $('#gnb>ul>li').trigger('mouseleave')
+            });
+            $('#gnb ul li ul').find('li:last a').on("keydown", function(e) {
+                if (e.keyCode == 9 && !shiftOn) $('#gnb>ul>li').trigger('mouseleave')
+            });
+            $('#location button').on('click', function() {
+                $(this).addClass('on').next().slideDown();
+            });
+            $('#location button').on('keydown', function(e) {
+                if (e.keyCode == 9 && shiftOn) $('#location div div').trigger('mouseleave');
+            });
+            $('#location div div ul').find('li:last a').on('keydown', function(e) {
+                if (e.keyCode == 9 && !shiftOn) $('#location div div').trigger('mouseleave');
+            });
+            $('#location div div').on('mouseleave', function() {
+                $(this).find('ul').slideUp().end().find('button').removeClass('on')
+            });
+            $('#content .TOP_btn button').on('click', function() {
+                $('html,body').animate({
+                    scrollTop: 0
+                })
+            });
+            $('#footer .col4 .list1>div>a').on('click',function(){
+                if($(this).hasClass('on')) $(this).removeClass('on').next().hide();
+                else $(this).addClass('on').next().show();
+                var family = $(this).parent();
+                
+                family.on('mouseleave',function(){
+                    $(this).children('a').removeClass('on').next().hide();
+                });
+                
+                $(this).next().find('a:first').on('keydown',function(e){
+                    if(shiftOn && e.keyCode ==9)family.trigger('mouseleave');
+                });
+                $(this).next().find('a:last').on('keydown',function(e){
+                    if(!shiftOn && e.keyCode ==9)family.trigger('mouseleave');
+                });
+                return false;
+            })
+
+
+
+
+        });
+
+    </script>
+    <!--[if lt IE 9]>
+	<script type="text/javascript" src="../js/html5shiv.js"></script>
+	<script type="text/javascript" src="../js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div id="skipnav"><a href="#content">본문바로가기</a></div>
+    <header id="header">
+        <div class="area clear">
+            <h1 id="log"><a href="../index.html"><img alt="한라 마스터 한라본부" width="200" height="32" src="../images/common/logo_h1.gif"></a></h1>
+            <nav id="gnb">
+                <ul>
+                    <li class="list1">
+                        <a href="">사업소개</a>
+                        <ul>
+                            <li><a href="">자동차부품유통</a></li>
+                            <li><a href="">자동차용품</a></li>
+                            <li><a href="">자동차부품물류</a></li>
+                            <li><a href="">냉장냉동물류</a></li>
+                            <li><a href="">건자재유통</a></li>
+                        </ul>
+                    </li>
+                    <li class="list2">
+                        <a href="">브랜드/제품</a>
+                        <ul>
+                            <li><a href="">MANDO +</a></li>
+                            <li><a href="">MANDO</a></li>
+                        </ul>
+                    </li>
+                    <li class="list3">
+                        <a href="">인재채용</a>
+                        <ul>
+                            <li><a href="">인재상 및 인사제도</a></li>
+                            <li><a href="">교육/복리후생</a></li>
+                            <li><a href="">직무소개</a></li>
+                            <li><a href="">채용절차</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">지원조회/결과확인</a></li>
+                            <li><a href="">채용문의</a></li>
+                        </ul>
+                    </li>
+                    <li class="list4">
+                        <a href="">글로벌 네트워크</a>
+                        <ul>
+                            <li><a href="">국내사업장</a></li>
+                            <li><a href="">해외사업장</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="lang">
+                <a href="">EN</a>
+                <a href="">CN</a>
+            </div>
+        </div>
+    </header>
+    <div id="location">
+        <div class="area">
+            <h2 class="blind">주소 정보 제공</h2>
+            <a href=""><img alt="" width="10" height="10" src="../images/common/bl_home.gif"></a>
+            <div class="dep1">
+                <button type="button"><em class="blind">현재 주몌뉴</em>글로벌 네트워크<em class="blind">전체 주몌뉴 보기</em></button>
+                <ul>
+                    <li><a href="">사업장소개</a></li>
+                    <li><a href="">브랜드/제품</a></li>
+                    <li><a href="">인재채용</a></li>
+                    <li><a href="">글로벌 네트워크</a></li>
+                </ul>
+            </div>
+            <div class="dep2">
+                <button type="button"><em class="blind">현재 부몌뉴</em>기업정보<em class="blind">전체 부몌뉴 보기</em></button>
+                <ul>
+                    <li><a href="">국내사업장</a></li>
+                    <li><a href="">해외사업장</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="area clear content_box">
+        <section id="content" aria="main">
+            <div class="bg_fff">
+                <div class="tit1_box">
+                    <h2 class="tit1">기업정보</h2>
+                    <p><strong>끊임없이 변화를 추구하는 마이스터 사업부문</strong>한라마이스터 사업부문은 정도경영을 기반으로 한 자동차부품 유통/서비스 기술력으로<br>세계 속의 글로벌 기업으로 성장하고 있습니다.</p>
+                </div>
+                <div class="tab_box">
+                    <ul>
+                        <li class="on"><a href="">기업소개</a></li>
+                        <li><a href="">연혁</a></li>
+                        <li><a href="">정보 경영</a></li>
+                    </ul>
+                </div>
+                <div class="tab_content">
+                    <h3 class="blind">기업소개</h3>
+                    <div class="col1">
+                        <h4>한라마이스터 사업부문은<br><strong>기술에 대한 도전정신</strong>으로 <strong>역동적인 내일을</strong> 만들어갑니다.</h4>
+                        <p>한라마이스터 사업부문은 1991년 설립 이래 지금까지 정도경영을 바탕으로<br>고객의 행복과 발전을 위한 고품질의 유통/물류 서비스를 펼쳐가고 있습니다.<br>자동차 부품사업의 다각화, 축적된 노하우와 글로벌 네트워크의 영향력<br>그리고 미래유망 신사업 발굴을 통해 유통/무역/서비스의 글로벌 전문기업으로 거듭날 것입니다.</p>
+                    </div>
+                    <div class="col2">
+                        <h4>한라정신 <span>HALLA GROUP PHILOSOPHY</span></h4>
+                        <p>한라마이스터 사업부문은 한라정신에 기초한 기업 철학을 중심으로 발전과 도약을 위한 핵심 경쟁력을 강화하고 있습니다.</p>
+                        <div class="col2_1">
+                            <div class="img_box">
+                                <img alt="한라정신" width="280" height="283" src="../images/company/img_a01_01.png">
+                            </div>
+                            <ul>
+                                <li>
+                                    <strong>진취적인 노력</strong>
+                                    <p>진취적인 노력은 업무를 수행해 나가는 추진력입니다.<br>이는 도전정신과 성취욕구를 갖고 어떠한 난관에 부딪혀서도<br>굴하지 않고, 목표한 바를 적극적으로 완수해나가는 것을 의미합니다.</p>
+                                </li>
+                                <li>
+                                    <strong>창의적인 개발</strong>
+                                    <p>창의적인 계발은 문제의식을 가지고 업무를 수행하면서<br>자발적으로 업무를 개선하려는 의지뿐만 아니라<br>부단히 자신을 계발해 나가고자 하는 노력입니다.</p>
+                                </li>
+                                <li>
+                                    <strong>공동체의식</strong>
+                                    <p>공동체의식은 서로를 격려하며 협조하는 화합과<br>동료애를 바탕으로 이어진 한라공동체를 만들어가는 일입니다.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="TOP_btn">
+                <button type="button">TOP</button>
+            </div>
+
+        </section>
+        <aside id="sideContent">
+            <ul>
+                <li class="list1"><a href="#">
+                    <strong>사업소개</strong>
+                    <span>새로운 가치를 만드는<br>한라홀딩스의 움직임</span>
+                    <img alt="" width="21" height="21" src="../images/common/bl_arrow3.png">
+                </a></li>
+                <li class="list2"><a href="#">
+                    <strong>브랜드소개</strong>
+                    <span>품질에 대한 신뢰를 전하는<br>한라홀딩스의 브랜드</span>
+                    <img alt="" width="21" height="21" src="../images/common/bl_arrow3.png">
+                </a></li>
+                <li class="list3"><a href="#">
+                    <strong>RECRUIT</strong>
+                    <span>한라홀딩스와 함께 성장할<br>인재를 기다리고 있습니다.</span>
+                    <img alt="" width="21" height="21" src="../images/common/bl_arrow3.png">
+                </a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer id="footer">
+        <div class="area">
+            <div class='col1'>
+                <h2><img alt="" width="150" height="29" src="../images/common/logo_footer.gif"></h2>
+                <address>서울특별시 송파구 올림픽로 289<br>(신천동) 시그마타워 6층<br>TEL : 02-526-0500 FAX : 02-526-0555    
+                </address>
+                <address>내비게이션·블랙박스 고객지원센터<br>
+                TEL : 1588-4181</address>
+                <ul class="link">
+                    <li><a href="">개인정보취급방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">오시는길</a></li>
+                </ul>
+            </div>
+            <div class='col2 con_2sam'>
+                <div>
+                    <strong>BUSINESS</strong>
+                    <ul>
+                        <li class="wd_35"><a href="">자동차부품유통</a></li>
+                        <li class="wd_65"><a href="">자동차용품</a></li>
+                        <li class="wd_35"><a href="">자동차부품물류</a></li>
+                        <li class="wd_65"><a href="">한라냉장</a></li>
+                        <li class="wd_35"><a href="">건자재유통</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col3 con_2sam">
+                <strong>BRAND</strong>
+                <a href="">Mando+</a>
+                <a href="">Mando</a>
+            </div>
+            <ul class='col4'>
+                <li class="list1">
+                    <div><a href="">RELATED LINKS</a>
+                        <div class="famliy">
+                            <h3 class="blind">관련 사이트 이동</h3>
+                            <h4>FAMLIY SITE</h4>
+                            <ul>
+                                <li><a href="">한라그룹</a></li>
+                                <li><a href="">한라그룹 정도경영</a></li>
+                                <li><a href="">한라인재개발원</a></li>
+                                <li><a href="">한라건설</a></li>
+                                <li><a href="">만도</a></li>
+                                <li><a href="">우리만</a></li>
+                                <li><a href="">목포신항만운영</a></li>
+                                <li><a href="">안양한라 아이스하키</a></li>
+                                <li><a href="">한라대학교</a></li>
+                                <li><a href="">한라스택풀</a></li>
+                                <li><a href="">만도헬라일렉트로닉스</a></li>
+                                <li><a href="">한라ENCOM</a></li>
+                                <li><a href="">만도신소재(주)</a></li>
+                                <li><a href="">한라개발</a></li>
+                            </ul>
+                            <h4>BRAND SITE</h4>
+                            <ul>
+                                <li><a href="">Mando+</a></li>
+                                <li><a href="">Mando Plaza</a></li>
+                            </ul>
+                            <h4>BUSINESS SITE</h4>
+                            <ul>
+                                <li><a href="">한라냉장</a></li>
+                                <li><a href="">부품카탈로그</a></li>
+                            </ul>
+                        </div>             
+                    </div>
+                </li>
+                <li class="list2"><a href="">SITEMAP</a></li>
+                <li class="list3"><a href="">CUSTOMER</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

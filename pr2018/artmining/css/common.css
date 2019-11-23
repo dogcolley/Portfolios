@@ -1,0 +1,217 @@
+@charset "utf-8";
+@font-face{
+    font-family:NanumS;
+    font-weight:300;
+    src:url("../font/NanumSquareL.eot");
+    src:local("※"), url("../font/NanumSquareL.woff") format("woff");
+}
+@font-face{
+    font-family:NanumS;
+    font-weight:500;
+    src:url("../font/NanumSquareR.eot");
+    src:local("※"), url("../font/NanumSquareR.woff") format("woff");
+}
+@font-face{
+    font-family:NanumS;
+    font-weight:700;
+    src:url("../font/NanumSquareB.eot");
+    src:local("※"), url("../font/NanumSquareB.woff") format("woff");
+}
+@font-face{
+    font-family:NanumS;
+    font-weight:900;
+    src:url("../font/NanumSquareEB.eot");
+    src:local("※"), url("../font/NanumSquareEB.woff") format("woff");
+}
+@font-face{
+    font-family:AvantGarBol;
+    font-weight:300;
+    src:url("../font/AvantGarBol.woff") format("woff");
+}
+
+@-webkit-keyframes arrowmove{/* 접두사 */
+    0%{left: -10%}
+    25%{left: 25%}
+    50%{left: 50%}
+    75%{left: 75%}
+    100%{left: 115%}
+}
+@-moz-keyframes arrowmove{/* 접두사 */
+    0%{left: -10%}
+    25%{left: 25%}
+    50%{left: 50%}
+    75%{left: 75%}
+    100%{left: 115%}
+}
+@-o-keyframes arrowmove{/* 접두사 */
+    0%{left: -10%}
+    25%{left: 25%}
+    50%{left: 50%}
+    75%{left: 75%}
+    100%{left: 115%}
+}
+@keyframes arrowmove{/* 접두사 */
+    0%{left: -10%}
+    25%{left: 25%}
+    50%{left: 50%}
+    75%{left: 75%}
+    100%{left: 115%}
+}
+@-webkit-keyframes fontmove{/* 접두사 */
+    0%{bottom: 0px}
+    20%{bottom: 10px}
+    40%{bottom: 0px}
+    60%{bottom: 0px}
+    80%{bottom: 0px}
+    100%{bottom: 0px}
+}
+@-moz-keyframes fontmove{/* 접두사 */
+    0%{bottom: 0px}
+    20%{bottom: 10px}
+    40%{bottom: 0px}
+    60%{bottom: 0px}
+    80%{bottom: 0px}
+    100%{bottom: 0px}
+}
+@-o-keyframes fontmove{/* 접두사 */
+    0%{bottom: 0px}
+    20%{bottom: 10px}
+    40%{bottom: 0px}
+    60%{bottom: 0px}
+    80%{bottom: 0px}
+    100%{bottom: 0px}
+}
+@keyframes fontmove{/* 접두사 */
+    0%{bottom: 0px}
+    20%{bottom: 10px}
+    40%{bottom: 0px}
+    60%{bottom: 0px}
+    80%{bottom: 0px}
+    100%{bottom: 0px}
+}
+/*태그 초기화*/
+body,ul,img,p,h1,h2,h3,button{margin:0;padding:0}
+ul li{list-style: none}
+a{text-decoration: none}
+a:link,a:visited,a:hover,a:active{color: inherit;font-size: inherit}
+img{vertical-align: top;border: none}
+body{font-family: NanumS;font-size: 16px;color: #242424;line-height: 1.15;background: #fff}
+article,section{display: block}
+em{font-style: normal}
+button{border: none;background:none;cursor: pointer}
+/* skip nav */
+#skipnav a{position: absolute;top: 0;left: -9999px;width: 100%;background: #f8c25c;text-align: center;font-size: 30px;font-weight: 700;padding: 20px 0px;height: 36px;z-index: 100}
+#skipnav a:focus{left: 0}
+
+/*전체 공통*/
+#content{position: relative}
+.area{width: 980px;margin: 0 auto}/*border: 1px solid red*/
+.over_latter:hover,.over_latter:focus,.over_latter.on{letter-spacing:2px;}
+.over_latter{display:block}
+.blind{text-indent: -9999px;height: 1px;width: 1px;overflow: hidden;position: absolute;left: -9999px}
+/*애니메이션 공통 클레스*/
+.util{display: inline-block}
+.util .arrow{display: inline-block;position: relative;width: 18px;height: 18px;border-radius: 9px;overflow: hidden;vertical-align: middle}
+.util .arrow:after{content:"";position: absolute;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left: 6px solid #fff;top: 5px;left: 7px}
+.util:hover .arrow:after,.util:focus .arrow:after{-webkit-animation:arrowmove 0.5s cubic-bezier(0, .02, 1, 1) 0s infinite normal;-moz-animation:arrowmove 0.5s cubic-bezier(0, .02, 1, 1) 0s infinite normal;-o-animation:arrowmove 0.5s cubic-bezier(0, .02, 1, 1) 0s infinite normal;animation:arrowmove 0.5s cubic-bezier(0, .02, 1, 1) 0s infinite normal}
+
+/* header */
+#header{position: fixed;z-index: 99;height: 76px;border: 1px solid rgba(24, 24, 24, 0.2);width: 100%;background: rgb(255, 255, 255);line-height: 76px;font-size: 18px;color: #141414}
+#header.notop{background: rgba(255, 255, 255, 0.6)}
+#header>.area{height: 100%;padding: 0px 50px 0px;}
+
+#header .area #logo,#header .area #gnb,#gnb>ul>li{float: left}
+#header .area .member_link{float: right}
+
+#header .area #logo:after,.over_latter,.foot_r .family .fs .box:after{transition: all 0.3s}
+
+#header .area #logo{padding:21px 0;position: relative}
+#header .area #logo img{position: relative;z-index: 99}
+#header .area #logo:after{content: "";position: absolute;width: 8px;height: 8px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;background-color:#F9C200;right: 0;top: 21px}
+#header .area #logo:hover:after,#header .area #logo a:focus +:after{-webkit-transform: scale(4);-moz-transform: scale(4);-o-transform: scale(4);-ms-transform: scale(4);transform: scale(4)}
+
+#header .area #gnb{margin-left: 186px}
+#header .area #gnb li{width: 145px; height: 28px}
+#header .area #gnb li:first-child{margin-right: 50px}
+#header #gnb li a{text-align: center}
+#header #gnb li a:hover,#header #gnb li a:focus{font-weight: 700}
+
+
+#header .util {height: 20px;margin: 28px 0;line-height: 20px}
+#header .util span{position: relative;height: 22px}
+#header .util .arrow{background-color: rgba(14, 14, 14, 0.5)}
+#header .util:hover .arrow:after,#header .util:focus .arrow:after{border-left-color: #000}
+#header .util:hover .arrow,#header .util:focus .arrow{background-color:#F9C200;}
+
+/*접두사*/
+#header .util:hover span:nth-child(1),#header .util:focus span:nth-child(1){
+	-webkit-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0s infinite normal;
+	-moz-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0s infinite normal;
+	-o-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0s infinite normal;
+	animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0s infinite normal;
+}
+#header .util:hover span:nth-child(2),#header .util:focus span:nth-child(2){
+	-webkit-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.15s infinite normal;
+	-moz-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.15s infinite normal;
+	-o-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.15s infinite normal;
+	animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.15s infinite normal
+}
+#header .util:hover span:nth-child(3),#header .util:focus span:nth-child(3){
+	-webkit-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.3s infinite normal;
+	-moz-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.3s infinite normal;
+	-o-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.3s infinite normal;
+	animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.3s infinite normal
+}
+#header .util:hover span:nth-child(4),#header .util:focus span:nth-child(4){
+	-webkit-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.45s infinite normal;
+	-moz-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.45s infinite normal;
+	-o-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.45s infinite normal;
+	animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.45s infinite normal
+}
+#header .util:hover span:nth-child(5),#header .util:focus span:nth-child(5){
+	-webkit-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.6s infinite normal;
+	-moz-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.6s infinite normal;
+	-o-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.6s infinite normal;
+	animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.6s infinite normal
+}
+#header .util:hover span:nth-child(6),#header .util:focus span:nth-child(6){
+	-webkit-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.75s infinite normal;
+	-moz-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.75s infinite normal;
+	-o-animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.75s infinite normal;
+	animation: fontmove 2s cubic-bezier(0, -0.01, 0, 0.96) 0.75s infinite normal
+}
+/* top link */
+#topLink{position: fixed;bottom: 80px;right: 0}
+
+/* footer */
+#footer {padding-top: 36px;font-size: 18px;border-top: 1px solid #CECECE}
+#footer>.area{padding: 0px 50px 100px 50px;height: 72px}
+#footer .foot_l,.foot_l ul li,.foot_r>a,.foot_r .family{float: left}
+
+.foot_l{line-height: 36px}
+.foot_l p{color: #909090}
+.foot_l ul{width: 300px}
+.foot_l ul:after{content: "";display: block;clear: both}
+.foot_l ul li:first-child:after{content: "";display: inline-block;height: 13px;width: 1px;background-color: #cecece;margin: 0 20px 0 20px}
+.foot_l ul li a{color: #000;opacity: 0.7;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';}
+.foot_l ul li a:hover,.foot_l ul li a:focus{opacity:1;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';}
+
+#footer .foot_r{float: right;margin: 12px 0px 12px 0}
+.foot_r>a{margin-right: 10px;text-align: center;width: 230px}
+.foot_r>a:after{content:"";height: 16px;width: 45px;display: inline-block;background: url("../images/common/footer-download-icon.png") no-repeat right 50%;vertical-align: middle}
+/* .family:btn */
+.foot_r>a,.foot_r .family{line-height: 46px;border: 1px solid #cecece;height: 46px}
+.foot_r .family{position: relative;width:200px;padding-left: 20px;}
+.foot_r .family ul{position: absolute;bottom:45px;left:-1px;border: 1px solid #cecece;width:200px;padding-left: 20px;background-color: #fff;z-index: 100}
+.foot_r .family .go{position: absolute;top: -1px;right: -55px;height: 46px;border: 1px solid #cecece;width: 48px;text-align: center}
+.foot_r .family .fs{line-height: 46px;font-size: 18px;color: inherit;cursor: pointer;width: 100%;text-align: left;position: relative}
+.foot_r .family .fs .box{position: absolute;width: 45px;height: 46px;border-left: 1px solid #cecece;top: 0;right: 0;}
+.foot_r .family .fs .box:before,.foot_r .family .fs .box:after{content: "";position: absolute;background-color: #000;width: 19px;height: 1px;margin: 0 auto;right: 0;left:0;top: 22px}
+.foot_r .family .fs .box:after{-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg)}
+
+.foot_r>a:hover,.foot_r>a:focus{-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px}
+.foot_r .family.on{-webkit-border-radius: 0 0 5px 5px-moz-border-radius: 0 0 5px 5px;border-radius: 0 0 5px 5px}
+.box:after,.foot_r .family.on .fs .box:after{transform: rotate(0deg)}
+
+
+

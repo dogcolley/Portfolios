@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+@font-face{
+    font-family:'NS_B';
+    src:url("../font/THEFACESHOPINKLIPQUID.eot");
+    src:local("※") ,url(../font/THEFACESHOPINKLIPQUID.woff) format('woff');
+}
+
+/* postion chlid a tag margin 0 auto*/
+.cpo_auto >a:after{left: 0;right: 0;margin: 0 auto}
+.po_auto:after{left: 0;right: 0;margin: 0 auto}
+.font_12{font-size:12px!important;letter-spacing: 0!important}
+/*#menuBtn{border-color: #313131;color: #313131}*/
+
+#main #content{height: 100%;width: 100%}
+#main #content .area{height: 100%;position: relative}
+/* maincontent */
+#bgVideo{position: fixed;width: 150%;height: 150%;top: -25%;left: -25%}
+.cover{position: fixed;width: 9%;height: 100%}
+#cover1{left: 0;top: 0}
+#cover2{right: 0;top: 0}
+#Mcover{display: none;height: 100%;width: 100%;position: fixed;background: #fff;background: url(../img/main/bg.png) no-repeat center;background-size: cover}
+#main .content_box{position: relative;background: rgba(255, 255, 255, 0.71);padding: 5%;height: 350px}
+#main #content .main_1 {position: absolute;right: 0;top: 25%;right: 10%;color: #222}
+#main #content .main_1 h2{font-family: 'NS_B';font-size: 60px;font-weight: 600;margin-bottom: 20px}
+#main #content .main_1 strong{display: block;text-align: center}
+#main #content .main_1 .bs{font-family: 'NS_B';font-size: 25px;font-weight: 400}
+#main #content .main_1 .such_box1{position: absolute;bottom: -50px;width: 100%}
+#main #content .main_1 .such_box1 input[type="text"]{width: 100%;border: none;position: relative;background: none;color: #666;font-family: inherit;font-size: 16px;text-indent: 20px}
+#main #content .main_1 .such_box1:after{content: "";position: absolute;width: 100%;height: 2px;border-radius:100%;background: #333;left: 0;bottom: -5px}
+#main #content .such_btn{position: absolute;right: 0;bottom: 0;width: 40px;height: 40px;background: url("../img/common/such.png") no-repeat;background-size: cover}
+#main #content .main_1 .such_box1 strong{position: absolute;bottom: -30px;right: 0;left: 0;margin: 0 auto}
+#main #content .main_2 {position: absolute;width: 300px;right: 0%;top: -200px;background: rgba(255, 255, 255, 0.55);height:40px;border-radius: 40px;display: none;opacity: 0}
+#main #content .main_2 input{background: none;border: none;position: absolute;bottom: 10px;left: 20px;width: 80%;font-size: 16px;color: #222}
+
+#main #content #location{position: absolute;top: 25%;left: 5%;z-index: 60}
+#main #content #location button{width: 60px;height: 60px;border-radius: 100%;background: rgba(255, 255, 255, 0.56);font-size: 19px;font-weight: 700}
+#main #content #location button:hover,#main #content #location button:focus,#main #content #location li.on button{background: #fff}
+#main #content #location ul li{margin-bottom: 20px}
+#main #content #location .list1 button{border: 4px solid #213487;color: #213487}
+#main #content #location .list2 button{border: 4px solid #40ae43;color: #40ae43}
+#main #content #location .list3 button{border: 4px solid #EBAB01;color: #EBAB01}
+
+#main #content section{display: none;height: 350px;position: relative;margin-left: 60px}
+#main #content section.on{display: block}
+#main #content section h3{position: absolute;font-size: 30px;font-weight: 700;font-family: "NS_G";top: -25px;left: -20%;color: #222;opacity: 0;transition: 1.5s all}
+#main #content section h3.on{left: 0;opacity: 1}
+
+#main #content #sectionBox .route{width: 100%;height: 100%;}
+#main #content #sectionBox .route_line{width: 80%;height: 100%;margin: 0 auto}
+#main #content #sectionBox .line_listm{display: none}
+#main #content #sectionBox .line_listpc{position: absolute;top: 0;left: 0;width: 100%;height: 100%}
+#main #content #sectionBox .line_listpc li{position: absolute;padding: 5px 10px;background: rgba(255, 255, 255, 0.68) ;border-radius:13px;font-size: 14px;color: #222;font-weight: 900}
+#main #content #sectionBox .line_listpc li a{position: relative;display: block}
+
+.route_line a{position: absolute;padding: 5px 10px;font-size: 14px;background: rgba(255, 255, 255, 0.55);border-radius: 19px;width: 60px;text-align: center;line-height: 14px;font-weight: 900;color: #222;transition: 0.5s all;opacity: 0!important}
+.route_line a.on{opacity: 1!important}
+.route_line a:hover,.route_line a:focus,.route_line a.on:focus{letter-spacing: 1px}
+.route_line a:after{content: "";position: absolute;width: 15px;height: 15px;background: #fff;border-radius: 100%;transition: 0.25s all}
+.route_line a:hover:after,.route_line a:focus:after,#cnt1 .route_line a.on:focus:after{border:2px solid #222;box-sizing: border-box}
+.route_line a:before{content:"";position: absolute}
+
+
+/* #cnt1 */
+#cnt1 .line1{position: absolute;height: 10px;width: 0%;background: #213487;border-radius: 5px 0 0 5px;top: 50%;margin-top: -5px}
+#cnt1 .line1 .line1_1{position: absolute;left: -7.5px;width: 15px;height: 15px;border: 5px solid #222;border-radius: 100%;background: #fff;top: 50%;margin-top: -12.5px;opacity: 0;transition: 1s all}
+#cnt1 .line1 .line1_2{position: absolute;right: 0;height:0px;background: #213487;width:10px;top: 50%;border-radius: 5px 0px 0px 5px;margin-top: -125px;transition: 1s all}
+#cnt1 .line2{position: absolute;top: 50px;width: 0%;right: 10.5%;height: 10px;background: #213487}
+#cnt1 .line3{position: absolute;top: 290px;width: 0%;left: 50%;height: 10px;background: #213487}
+#cnt1 .line2_1,#cnt1 .line3_1{content: "";position: absolute;right: -7.5px;width: 15px;height: 15px;border: 5px solid #222;border-radius: 100%;background: #fff;top: 50%;margin-top: -12.5px;opacity: 0;transition: 1s all}
+
+#cnt1 .route_line a:hover,#cnt1 .route_line a:focus,#cnt1 .route_line a.on:focus{color: #213487}
+#cnt1 .route_line .line1>a:nth-child(even){top: -60px}
+#cnt1 .route_line .line1>a:nth-child(even):after{top: 57px}
+#cnt1 .route_line .line1>a:nth-child(odd){top: 40px}
+#cnt1 .route_line .line1>a:nth-child(odd):after{top: -43px}
+#cnt1 .route_line .line1>a:nth-child(1){left: 15%}
+#cnt1 .route_line .line1>a:nth-child(2){left: 30%}
+#cnt1 .route_line .line1>a:nth-child(3){left: 45%}
+#cnt1 .route_line .line1>a:nth-child(4){left: 60%}
+#cnt1 .route_line .line1>a:nth-child(5){left: 75%}
+#cnt1 .route_line .line1_2 a{left: 40px}
+#cnt1 .route_line .line1_2 a:after{left: -54%}
+#cnt1 .route_line .line1_2 a:nth-child(1){top: -90px}
+#cnt1 .route_line .line1_2 a:nth-child(2){top: -40px}
+#cnt1 .route_line .line1_2 a:nth-child(3){top: 30px}
+#cnt1 .route_line .line1_2 a:nth-child(4){top: 70px}
+#cnt1 .route_line .line2 a:nth-child(odd),#cnt1 .route_line .line3 a:nth-child(odd){top: -60px}
+#cnt1 .route_line .line2 a:nth-child(odd):after,#cnt1 .route_line .line3 a:nth-child(odd):after{top: 58px}
+#cnt1 .route_line .line2 a:nth-child(even),#cnt1 .route_line .line3 a:nth-child(even){top:40px}
+#cnt1 .route_line .line2 a:nth-child(even):after,#cnt1 .route_line .line3 a:nth-child(even):after{top:-42px}
+#cnt1 .route_line .line2 a:nth-child(2),#cnt1 .route_line .line3 a:nth-child(2){right: 5%}
+#cnt1 .route_line .line2 a:nth-child(3),#cnt1 .route_line .line3 a:nth-child(3){right: 20%}
+#cnt1 .route_line .line2 a:nth-child(4),#cnt1 .route_line .line3 a:nth-child(4){right: 45%}
+#cnt1 .route_line .line2 a:nth-child(5){right: 60%}
+
+/* #cnt2 */
+#cnt2 .line1{position:absolute;width: 0%;height: 7px;background: #40ae43;top: 80%}
+#cnt2 .line2{position:absolute;width: 0%;margin: 0 auto;right: 0;left: 0;height: 300px;border: 7px solid #40ae43;top: 50%;margin-top: -150px;border-radius: 50px}
+#cnt2 .line3{position:absolute;width: 0%;height: 7px;background: #40ae43;top: 25%;right: 10%}
+#cnt2 .line1_1,#cnt2 .line3_1{content: "";position: absolute;width: 15px;height: 15px;border: 5px solid #222;border-radius: 100%;background: #fff;top: 50%;margin-top: -12.5px;opacity: 0;transition: 1s all}
+#cnt2 .line1_1{left: 0px}
+#cnt2 .line3_1{right: 0px}
+
+#cnt2 .line2>div{position: absolute;width: auto}
+#cnt2 .line2 a{position: relative}
+#cnt2 .line2 a:hover,#cnt2 .line2 a:focus,#cnt2 .line2 a.on:focus{color: #40ae43}
+#cnt2 .line2 .line2_bottom a, #cnt2 .line2 .line2_top a{display: inline-block;margin:0 10px}
+#cnt2 .line2 .line2_bottom,#cnt2 .line2 .line2_top{text-align: center;width: 100%}
+#cnt2 .line2 .line2_top a:after,#cnt2 .line2 .line2_bottom a:after{top: -40px}
+#cnt2 .line2 .line2_bottom{bottom:-60px}
+#cnt2 .line2 .line2_top{top:30px}
+#cnt2 .line2 .line2_right,#cnt2 .line2 .line2_left{width: 70px}
+#cnt2 .line2 .line2_right a,#cnt2 .line2 .line2_left a{margin-bottom: 20px;display: block}
+#cnt2 .line2 .line2_left{left: -100px;top: 50px}
+#cnt2 .line2 .line2_right{right: -100px;bottom: 50px}
+#cnt2 .line2 .line2_left a:after{right: -30%}
+#cnt2 .line2 .line2_right a:after{left: -42%}
+/* #cnt3 */
+#cnt3 .route_line>div{margin-left: 20%;width: 80%;height: 50%;border-right: 7px solid #ebab01;box-sizing: border-box;transition: 2s opacity;opacity: 0;position: relative}
+#cnt3 .route_line>div:after{content: "";position: absolute;width: 15px;height: 15px;background: #fff;border-radius: 100%;border: 3px solid #222;opacity: 0;transition: 1s all}
+#cnt3 .route_line>div.on:after{opacity: 1}
+#cnt3 .route_line>.line1:after{top: -12.5px;left: 0}
+#cnt3 .route_line>.line2:after{bottom: -12.5px;left: 0}
+#cnt3.on .route_line>div{opacity: 1}
+#cnt3 .line1{border-top: 5px solid #EBAB01;border-radius:0 175px 0 0}
+#cnt3 .line2{border-bottom: 5px solid #ebab01;border-radius:0 0 175px 0}
+#cnt3 .line1 a:nth-child(-n+5){top: 40px}
+#cnt3 .line1 a:nth-child(1){left: 5%}
+#cnt3 .line1 a:nth-child(2){left: 20%}
+#cnt3 .line1 a:nth-child(3){left: 35%}
+#cnt3 .line1 a:nth-child(4){left: 50%}
+#cnt3 .line1 a:nth-child(5){left: 65%}
+#cnt3 .line1 a:nth-child(-n+5):after{top: -50px}
+#cnt3 .line1 a:nth-child(6){position: static;display: block;margin-left: 80%;margin-top: 70px}
+#cnt3 .line1 a:nth-child(6):after{right: 7.5%;top: 12%}
+#cnt3 .line1 a:nth-child(7){position: static;display: block;margin-left: 85%;margin-top: 30px}
+#cnt3 .line1 a:nth-child(7):after{top: 45%;right: 1.5%}
+#cnt3 .line2 a:nth-child(1){position: static;display: block;margin-left: 85%}
+#cnt3 .line2 a:nth-child(1):after{top: 45%;right: 1.3%}
+#cnt3 .line2 a:nth-child(2){position: static;display: block;margin-left: 80%;margin-top: 30px}
+#cnt3 .line2 a:nth-child(2):after{top: 82.5%;right: 8.3%}
+#cnt3 .line2 a:nth-child(3){left: 60%;top: 100px}
+#cnt3 .line2 a:nth-child(4){left: 40%;top: 100px}
+#cnt3 .line2 a:nth-child(5){left: 20%;top: 100px}
+#cnt3 .line2 a:nth-last-child(-n+3):after{bottom: -55px}
+#cnt3 .route_line a:hover,#cnt3 .route_line a:focus,#cnt3 .route_line a.on:focus{color: #EBAB01}
+
+@media all and (max-width:1800px) {
+    #cnt3 .line1 a:nth-child(6):after{right: 8.5%}
+    #cnt3 .line2 a:nth-child(2):after{right: 9.3%}
+}
+@media all and (max-width:1650px) {
+    #cnt3 .line1 a:nth-child(6):after{right: 9%}
+    #cnt3 .line2 a:nth-child(2):after{right: 9.8%}
+}
+@media all and (max-width:1650px) {
+    #cnt3 .line1 a:nth-child(6):after{right: 9.5%}
+    #cnt3 .line2 a:nth-child(2):after{right: 10.3%}
+}
+@media all and (max-width:1550px) {
+    #main #content section h3{font-size:26px}
+    #cnt3 .line1 a:nth-child(7):after{right: 1.8%}
+    #cnt3 .line2 a:nth-child(1):after{right: 1.6%}
+    #cnt3 .line1 a:nth-child(6):after{right: 10.5%}
+    #cnt3 .line2 a:nth-child(2):after{right: 11.3%}
+}
+
+@media all and (max-width:1350px) {
+    #main #content section h3{font-size: 20px}
+    #main #content section{margin: 0;text-align: center}
+    .route_line a{font-size: 12px ;line-height: 12px;padding: 3.5px 2.5px;line-height: 12px}
+    #cnt1 .route_line .line1>a:nth-child(1){left: 10%}
+    #cnt1 .route_line .line1>a:nth-child(2){left: 25%}
+    #cnt1 .route_line .line1>a:nth-child(3){left: 40%}
+    #cnt1 .route_line .line1>a:nth-child(4){left: 55%}
+    #cnt1 .route_line .line1>a:nth-child(5){left: 70%}
+    #cnt1 .route_line .line1_2 a{left: 25px}
+    #cnt1 .route_line .line1_2 a:after{left: -42%}
+    #cnt1 .route_line .line2 a:nth-child(2),#cnt1 .route_line .line3 a:nth-child(2){right: 5%}
+    #cnt1 .route_line .line2 a:nth-child(3),#cnt1 .route_line .line3 a:nth-child(3){right: 20%}
+    #cnt1 .route_line .line2 a:nth-child(4),#cnt1 .route_line .line3 a:nth-child(4){right: 40%}
+    #cnt1 .route_line .line2 a:nth-child(5){right: 55%}
+    
+    #cnt2 .line2 .line2_bottom a:after{top: -30px}
+    #cnt2 .line2 .line2_bottom{bottom:-45px}
+    #cnt2 .line2 .line2_right,#cnt2 .line2 .line2_left{width: 65px}
+    #cnt2 .line2 .line2_left a:after{right: -58%}
+    #cnt2 .line2 .line2_right a:after{left: -60%}
+    
+    #cnt3 .line2 a:nth-child(3){top: 110px}
+    #cnt3 .line2 a:nth-child(4){top: 110px}
+    #cnt3 .line2 a:nth-child(5){top: 110px}
+    #cnt3 .line2 a:nth-last-child(-n+3):after{bottom: -52px}    
+    #cnt3 .line1 a:nth-child(6):after{right: 11.5%}
+    #cnt3 .line2 a:nth-child(2):after{right: 12.3%}
+}
+
+@media all and (max-width:1200px) {
+    #cnt3 .line1 a:nth-child(7):after{right: 2.3%}
+    #cnt3 .line2 a:nth-child(1):after{right: 2.1%}   
+}
+
+@media all and (max-width:1124px) {
+    #bgVideo{width: 200%;height: 200%;top: -50%;left: -50%}
+    #cnt3 .line1 a:nth-child(6):after{right: 12.5%}
+    #cnt3 .line2 a:nth-child(2):after{right: 13.3%}
+}
+@media all and (max-width:1024px) {
+    #cnt3 .line1 a:nth-child(6):after{right: 11%}
+    #cnt3 .line2 a:nth-child(2):after{right: 12.3%}
+}
+@media all and (max-width:910px) {
+    #cnt2 .line2 .line2_left{left: -80px}
+    #cnt2 .line2 .line2_left a:after{right: -29%}
+}
+@media all and (max-width:850px) {
+    #bgVideo{width: 250%;height: 250%;top: -75%;left: -75%}
+    #cnt3 .line1 a:nth-child(6):after{right: 13%}
+    #cnt3 .line2 a:nth-child(2):after{right: 14.3%}
+}
+@media all and (max-width:765px) {
+    #bgVideo{display: none}
+    #Mcover{display: block;z-index: 0}
+    #main .content_box{height: 300px!important}
+    #main #content #location{top:105%;left: 50%;margin-left: -85px}
+    #main #content #location ul li{float: left;margin-right: 20px}
+    #main #content #location button{width: 50px;height: 50px;border-radius: 100%;background: rgba(255, 255, 255, 0.56);font-size: 16px;font-weight: 700}
+    #main #content #location button:hover,#main #content #location button:focus,#main #content #location li.on button{background: #fff}
+    #main #content #location ul li{margin-bottom: 0px}
+    
+    #main .content_box{position: relative;background: rgba(255, 255, 255, 0.52);padding: 5%;height: 350px}
+    
+    #main #content .main_1 {left: 0;right: 10%;width: 100%;color: #222}
+    #main #content .main_1 h2{text-align: center;font-size: 40px}
+    #main #content .main_1 .such_box1{bottom: -100px;width: 80%;right: 0;left: 0;margin: 0 auto}  
+    #main #sectionBox{overflow: hidden}
+    #main #content section h3{font-size: 18px;position: relative;font-weight: 700;top: 0;text-align: center;display: inline-block;background: #fff;padding: 5px 5px;border-radius: 5px;position: relative;border: 3px solid}
+    #main #content section h3:after,#main #content section h3:before{content: "";position: absolute;height: 5px;width: 300px;top: 50%;margin-top: -2.5px}
+    #main #content section h3:after{left: 100%}
+    #main #content section h3:before{right: 100%}
+    #main #content #cnt1 h3:after,#main #content #cnt1 h3:before{background: #213487}
+    #main #content #cnt2 h3:after,#main #content #cnt2 h3:before{background: #40ae43}
+    #main #content #cnt3 h3:after,#main #content #cnt3 h3:before{background: #EBAB01}
+    #main #content section#cnt1 h3{border-color: #213487}
+    #main #content section#cnt2 h3{border-color: #40ae43}
+    #main #content section#cnt3 h3{border-color: #EBAB01}
+    #main #content section{height: 300px}
+    #main #content .route_line{display: none}
+    
+    #main #content #sectionBox .line_listm{display: block;overflow-y: auto;height: 250px;width: 100%;box-sizing: border-box;position: relative;opacity: 0;transition: 1s all}
+    #main #content #sectionBox .line_listm:after{content: "";width: 10px;position: absolute;top: 0;left: 50%;margin-left: -5px;border-radius: 0 0 5px 5px}
+    #main  #sectionBox #cnt1 .line_listm:after{background-color: #213487;height: 750px}
+    #main  #sectionBox #cnt2 .line_listm:after{background-color: #40ae43;height: 550px}
+    #main  #sectionBox #cnt3 .line_listm:after{background-color: #ebab01;height: 550px}
+    #main #content #sectionBox .line_listm li {margin-bottom: 10px;box-sizing: border-box;padding-top: 10px}
+    #main #content #sectionBox .line_listm li a{display: inline-block;padding: 2.5px 10px;color: #fff;border-radius: 15px;position: relative}
+    #main #sectionBox #cnt1 .line_listm li a{background-color: #213487}
+    #main #sectionBox #cnt2 .line_listm li a{background-color: #40ae43}
+    #main #sectionBox #cnt3 .line_listm li a{background-color: #ebab01}
+    #main #content #sectionBox .line_listm li:nth-child(odd){float: left;width: 51%}
+    
+    #main #content #sectionBox .line_listm li:nth-child(odd):after{content: "";position: absolute;width: 10px;height: 10px;background: #fff;z-index: 70;border: 3px solid;border-radius: 100%;right: 0;left: 0;margin: 0 auto}
+    #main #content #sectionBox .line_listm li:nth-child(even):after{content: "";position: absolute;width: 10px;height: 10px;background: #fff;z-index: 70;border: 3px solid;border-radius: 100%;right: 0;left: 0;margin: 0 auto}
+    
+    #main #content #sectionBox .line_listm li:nth-child(odd):before,#main #content #sectionBox .line_listm li:nth-child(even):before{content:"";height: 0;width: 14%;position: absolute;margin-top: 5px;border: 1.5px dotted #222}
+    #main #content #sectionBox .line_listm li:nth-child(odd):before{right: 50%}
+    #main #content #sectionBox .line_listm li:nth-child(even):before{left: 50%}
+/*    #main #content #sectionBox #cnt1 .line_listm li:before{border-color:#0b1233}*/
+/*    #main #content #sectionBox #cnt2 .line_listm li:before{border-color:#40ae43}*/
+/*    #main #content #sectionBox #cnt3 .line_listm li:before{border-color:#ebab01}*/
+    
+    #main #content #sectionBox .line_listm li:nth-child(even){float: right;width: 50%}
+    #main #content #sectionBox .line_listm li:nth-child(odd) a{float:right;margin-right: 25%}
+    #main #content #sectionBox .line_listm li:nth-child(even) a{float: left;margin-left: 25%}
+}
+@media all and (max-width:670px) {
+    #bgVideo{width: 300%;height: 300%;top: -100%;left: -100%}
+}
+
+@media all and (max-height:568px) {
+    #main #content .main_2 {width: 250px;height:25px;border-radius: 25px}
+    #main #content .main_2 .such_btn{width: 28px;height: 28px}
+    #main #content .main_2 input{bottom: 5px;width: 80%;font-size: 12px}
+}
+
+@media all and (max-width:560px) {
+    #bgVideo{width: 400%;height: 400%;top: -150%;left: -135%}
+}
+@media all and (max-width:350px) {
+    #main #content .main_1 h2{text-align: center;font-size: 30px}
+    #main #content .main_1 .bs{font-size: 20px}
+    #main #content .main_1 .such_box1 strong{font-size: 14px}
+}
+
+/* */
+
+/* main footer*/

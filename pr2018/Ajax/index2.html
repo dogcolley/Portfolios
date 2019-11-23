@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax : 사용법</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('#join').on('submit',function(){
+                var src = $(this).serialize();
+                $.ajax({
+                    url:'load4.json',
+                    async:true,
+                    cache:true,
+                    type:'post',
+                    data:src,
+//                    dataType:'html',
+                    success:function(result){
+                        $('#title').text(result);
+                    },
+                    error:function(){
+                        alert('실패');
+                    }
+                });
+                return false;
+            });
+          });
+    </script>
+    <style type="text/css">
+        body{margin: 0;padding: 0}    
+        #join{background: yellow;padding: 30px;margin-top: 100px}
+        h1{background: pink;padding: 30px;margin: 200px 0 1000px}
+    
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <form id="join" method="post" action="load3.php">
+            <input type="text" value="" title="이름 입력" id="UName" name="UName">
+            <input type="submit" value="전송">
+        </form>
+        <h1 id="title">보노보노:헛소리하지마 임마</h1>
+    </div>
+</body>
+</html>

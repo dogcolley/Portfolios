@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>쿠키</title>
+    <style type="text/css">
+        body,h1,h2,h3,ul,p,td,th{margin: 0;padding: 0;}
+        table{border-collapse: collapse;border-spacing: none}
+        li {list-style: none}
+        input{font-size: inherit;border: none;background: none;line-height: inherit;font-size: inherit}
+        button{border: none;background: none;cursor: pointer;font-size: inherit;line-height: inherit;color: inherit}
+        em{font-style: normal;font-size: 12px;position: absolute;top: 43px}
+        img{vertical-align: top;border: none}
+        
+        #popup{width: 500px;position: absolute;background: #fff;z-index: 90;top: 80px;left: 50%;margin-left: -250px}
+        #skip{position: absolute;width: 100%;height: 50px;left: -9999px;z-index: 100}
+        #btn{text-align: left;padding: 5px 0px}
+        #btn *{vertical-align: middle;line-height:17px;height: 17px}
+        #CBN{background: #333;color: #fff;font-size: 12px;line-height: 1;box-sizing: border-box;padding: 2px 3px;margin-left: 10px}
+        #CHK{margin-top: 5px}
+        #content{height: 1000px;width: 100%;background: pink}
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var $popup = $('#popup');
+            var a = getCookie('mainBanner');
+            console.log(a);
+            if(a =="Y")$popup.hide();
+            $popup.find('#CBN').on('click',function(){
+               var z= $('#CHK').prop('checked');
+               if(!z)$popup.hide();
+               else {setCookie('mainBanner','Y',1);$popup.hide()}
+            });
+        });
+        function setCookie(name,value,expiredays){
+            var todayDate = new Date();   
+            todayDate.setDate( todayDate.getDate() + expiredays );   
+            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toUTCString() + ";"   
+        }
+        function getCookie( name ) {  
+            var nameOfCookie = name + "=";  
+            var x = 0;  
+            while ( x <= document.cookie.length ) {  
+                var y = (x+nameOfCookie.length);    
+                    if ( document.cookie.substring( x, y ) == nameOfCookie ) {  
+                        if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )  
+                            endOfCookie = document.cookie.length;  
+                        return unescape( document.cookie.substring( y, endOfCookie ) );  
+                }  
+                x = document.cookie.indexOf( " ", x ) + 1;  
+                if ( x == 0 )break;  
+            }  
+            return "";   
+        }  
+    </script>
+</head>
+    <div id="skip"><a href="">본문 바로가기</a></div>
+    <div id="popup">
+        <div id="cnt"><img alt="2018아시안게임" width="500" height="500" src="images/popup.jpg"></div>
+        <div id="btn">
+            <input type="checkbox" id="CHK">
+            <label for="CHK">오늘 하루 열지 않기</label>
+            <button type="button" id="CBN">닫기</button>
+        </div>
+    </div>
+    <div id="content"></div>
+<body>
+</body>
+
+</html>

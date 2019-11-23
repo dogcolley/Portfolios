@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+//tag reset;
+body,html,h1,h2,h3,h4,h5,button,p,ul,ol,dl,dd,figure,{margin:0;padding:0}
+h1,h2,h3,h4{font-size: inherit}
+li{list-style:none}
+body,html{width: 100%;height: 100%}
+body{font-size:16px;font-weight:400;color: #666;font-family: 'NS_O'}
+button{border:none;background:none;cursor:pointer;color: inherit;font-size: inherit}
+a{text-decoration:none}
+a:link,a:visited,a:hover,a:active{color:inherit;font-size:inherit}
+img{width:100%;height:auto;border:none;vertical-align:top}
+address{font-style: normal}
+select{color:inherit}
+table{border-spacing:0px;border-collapse:collapse}
+
+body{@inculde trdeg(40deg);font-family: "NS-G";color: #fff}
+//font control
+@font-face{
+    font-family:'NS_G';
+    font-weight:200;
+    src:url("../font/NanumSquareL.eot");
+    src:local("※") ,url(../font/NanumSquareL.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_G';
+    font-weight:400;
+    src:url("../font/NanumSquareR.eot");
+    src:local("※") ,url(../font/NanumSquareR.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_G';
+    font-weight:700;
+    src:url("../font/NanumSquareB.eot");
+    src:local("※") ,url(../font/NanumSquareB.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_G';
+    font-weight:900;
+    src:url("../font/NanumSquareEB.eot");
+    src:local("※") ,url(../font/NanumSquareEB.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_O';
+    font-weight:200;
+    src:url("../font/NanumSquareRoundL.eot");
+    src:local("※") ,url(../font/NanumSquareRoundL.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_O';
+    font-weight:400;
+    src:url("../font/NanumSquareRoundR.eot");
+    src:local("※") ,url(../font/NanumSquareRoundR.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_O';
+    font-weight:700;
+    src:url("../font/NanumSquareRoundB.eot");
+    src:local("※") ,url(../font/NanumSquareRoundB.woff) format('woff');
+}
+@font-face{
+    font-family:'NS_O';
+    font-weight:900;
+    src:url("../font/NanumSquareRoundEB.eot");
+    src:local("※") ,url(../font/NanumSquareRounEB.woff) format('woff');
+}
+//sass 
+@mixin tr($s,$attr){
+    -o-transition: $s $attr;
+    -webkit-transition: $s $attr;
+    transition: $s $attr;
+}
+@mixin trdy($num){
+    transition-delay: $num;
+}
+@mixin op($num){
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity='+($num*100)+')';
+    opacity: $num;
+}
+@mixin trform($x,$y){
+    -webkit-transform: translate($x,$y);
+    -moz-transform: translate($x,$y);
+    -o-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform: translate($x,$y);
+}
+@mixin trdeg($deg){
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    transform: rotate($deg);
+}
+@mixin out_line($num,$color){
+    outline: $num dotted $color;
+}
+@mixin border_RD($num1,$num2,$num3,$num4){
+    -webkit-border-radius: $num1 $num2 $num3 $num4;
+    -moz-border-radius: $num1 $num2 $num3 $num4;
+    border-radius: $num1 $num2 $num3 $num4;
+}
+@mixin ps($top,$bottom,$left){
+    top:$top;bottom:$bottom;left:$left;
+}
+@-webkit-keyframes move1{
+    from {@include trdeg(0deg)}
+    to {@include trdeg(360deg)}
+}
+@-moz-keyframes move1{
+    from {@include trdeg(0deg)}
+    to {@include trdeg(360deg)}
+}
+@-o-keyframes move1{
+    from {@include trdeg(0deg)}
+    to {@include trdeg(360deg)}
+}
+@keyframes move1{
+    from {@include trdeg(0deg)}
+    to {@include trdeg(360deg)}
+}
+
+@mixin mainAni($delay,$time,$mode){
+    -webkit-animation: move1 $time cubic-bezier(0, .02, 1, 1) $delay infinite $mode;
+    -moz-animation: move1 $time cubic-bezier(0, .02, 1, 1) $delay infinite $mode;
+    -o-animation: move1 $time cubic-bezier(0, .02, 1, 1) $delay infinite $mode;
+    animation: move1 $time cubic-bezier(0, .02, 1, 1) $delay infinite $mode;
+}
+@mixin boxsize($attr){
+    -webkit-box-sizing:$attr;
+    -moz-box-sizing:$attr;
+    box-sizing:$attr; 
+}
+@mixin textGR($color1,$color2,$color3){
+    background: $color1;
+    background: -webkit-linear-gradient(left, $color2, $color3);
+    background:    -moz-linear-gradient(right, $color2, $color3);
+    background:      -o-linear-gradient(right, $color2, $color3);
+    background:         linear-gradient(to right, $color2, $color3);
+    -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+}
+//common clsass
+.block {display: block}
+.blind {text-indent: -9999px;height: 1px;line-height: 1px;overflow: hidden}
+.pix9,.bg4{background-color: #000}
+.lg,.bg1{background-color: #C40452}
+.huvis,.bg2,.halla{background-color: #002E5D}
+.artmining,.bg3{background-color:#FBCB00}
+
+#wrap{width: 100%;height: 100%;overflow: hidden;position: relative}
+//skip nav
+#skip{width: 100%;position: fixed;top: 0;left: 0;z-index: 100}
+#skip a{position: absolute;top:0;width: 100%;height: 80px;background: rgba(0, 0, 0, 0.71);text-align: center;line-height: 80px;text-align: center;font-size: 40px;left: -9999px}
+#skip a:focus{left: 0}
+
+
+//main
+#main{overflow: hidden;@include tr(1s,all)}
+.mode1{background-color: #1b47a5;
+    .cover{border-color: #163b8c!important}
+    #round6{background-color: #163b8c}
+    h1,#header p{color: #fff}
+    .cover1{box-shadow: 10px -10px 20px rgba(17, 43, 101, 0.2)}
+    .cover2{box-shadow: 10px 10px 20px rgba(17, 43, 101, 0.2)}
+}
+.mode2{background-color: #f282ac;
+    .cover{border-color: #d45e89!important}
+    #round6{background-color: #d45e89}
+    h1,#header p{color: #620025}
+    .cover1{box-shadow: 10px -10px 20px rgba(98, 0, 37, 0.2)}
+    .cover2{box-shadow: 10px 10px 20px rgba(98, 0, 37, 0.2)}
+}
+.mode3{background-color: #86acb2;
+    .cover{border-color: #6f9aa1!important}
+    #round6{background-color: #6f9aa1}
+    h1,#header p{color: #024e5a}
+    .cover1{box-shadow: 10px -10px 20px rgba(2, 78, 90, 0.2)}
+    .cover2{box-shadow: 10px 10px 20px rgba(2, 78, 90, 0.2)}
+}
+.mode4{background-color: #ebd3c1;
+    .cover{border-color: #ccaea0!important}
+    #round6{background-color: #ccaea0}
+    h1,#header p{color: #522300}
+    .cover1{box-shadow: 10px -10px 20px rgba(82, 35, 0, 0.2)}
+    .cover2{box-shadow: 10px 10px 20px rgba(82, 35, 0, 0.2)}
+}
+#main h1,#main #header p{@include tr(1s,all)}
+#main h1{margin-top: 15%;margin: 0 auto;position: relative}
+#main #bgbox{height: 100%;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;
+    >div{height: 100%;position: relative;
+        >div{position: absolute;width: 100%}
+        >div:after{content: "";position: absolute;background: rgb(255, 255, 255);@include border_RD(100%,100%,100%,100%)} 
+    }
+    .leftS{float: left;
+        .round1{@include ps(10%,10%,10%)}
+        .round1:after{width: 100%;height: 100%;top: -20px;opacity: 0.5}
+        .round2{@include ps(5%,5%,120%)}
+        .round2:after{width: 10%;height: 10%;opacity: 0.8}
+        .round3{@include ps(20%,20%,100%)}
+        .round3:after{width: 60%;height: 60%;top: 50%;margin-left: -30%;opacity: 0.7}
+        .round4{@include ps(45%,45%,-50%)}
+        .round4:after{width: 200%;height: 200%;top:0;opacity: 0.2}
+        .round5{@include ps(5%,5%,120%)}
+        .round5:after{width: 20%;height: 20%;top: 70%;opacity: 0.8}
+        .round6{@include ps(50%,50%,110%)}
+        .round6:after{width: 45%;height:45%;top: 45%;margin-left: -30%;opacity: 0.6}
+        
+    }
+    .righitS{float: right;
+        .round1{@include ps(15%,15%,15%)}
+        .round1:after{width: 100%;height: 100%;top: -20px;opacity: 0.5}
+        .round2{@include ps(5%,5%,-150%)}
+        .round2:after{width: 15%;height: 15%;opacity: 0.7}
+        .round3{@include ps(20%,20%,30%)}
+        .round3:after{width: 60%;height: 60%;top: 50%;margin-left: -30%;opacity: 0.6}
+        .round4{@include ps(40%,40%,-50%)}
+        .round4:after{width: 180%;height: 180%;top:0;opacity: 0.25}
+        .round5{@include ps(0%,0%,25%)}
+        .round5:after{width: 20%;height: 20%;top: 70%;opacity: 0.7}
+        .round6{@include ps(5%,5%,-100%)}
+        .round6:after{width: 40%;height: 40%;top: 70%;opacity: 0.8}
+        .round7{@include ps(10%,10%,100%)}
+        .round7:after{width: 20%;height: 20%;top: 70%;opacity: 0.9}
+    }
+}
+#main #bgbox.on{
+    >div div{@include mainAni(0s,25s,normal)}
+    .righitS .round4{@include mainAni(0s,20s,reverse)}   
+}
+
+#main .logtxt{position: absolute;top: 0;left: 0;display: table;height: 100%;width: 100%;
+    .center_UD{display:table-cell;vertical-align: middle;text-align: center}
+    #mainTxt{font-size: 40px;letter-spacing: 1px}
+    #round6 {height: 20%;top: 40%;@include border_RD(50%,50%,50%,50%);margin: 0 auto}
+    #round6 button{width: 100%;height:100%;font-weight: 700;letter-spacing: 1px}
+}
+#main .mini_text{text-align: center;font-size: 18px;letter-spacing: 1.5px;color: #f2f2f2}
+#main #time{display: block;text-align: center;font-size: 30px}
+#main #round{width: 100%;height: 100%;margin: 0 auto;position: relative}
+
+#main #mainLog.on #round{
+    #round1 {@include mainAni(0s,12s,normal)}
+    #round2 {@include mainAni(0s,12s,reverse)}
+    #round3 {@include mainAni(0s,9s,normal)}
+    #round4 {@include mainAni(0s,9s,reverse)}
+    #round5 {@include mainAni(0s,8s,normal)}
+}
+#main #mainLog #round{
+    #round1 {height: 80%;top: 10%}
+    #round2 {height: 70%;top: 15%}
+    #round3 {height: 60%;top: 20%}
+    #round4 {height: 50%;top: 25%}
+    #round5 {height: 40%;top: 30%}
+}
+#main #mainLog .round{margin: 0 auto;position: absolute;right: 0;left: 0;
+    .cover{position: absolute;width: 50%;height: 50%;box-sizing: border-box}
+    .cover1{top: 0;left: 0;@include border_RD(100%,0,0,0)}
+    .cover2{bottom: 0;right: 0;@include border_RD(0,0,100%,0)}
+
+}
+
+//section skill
+#main section{width: 100%;height: 100%;position: absolute;display: none;
+    .tab_cl{position: absolute;width:50px;height: 50px;background: url("../img/clbtn.png") no-repeat;right: 40px;top: 5%;z-index: 90;@include tr(1s, all);text-indent: -9999px;background-size: cover;}
+}
+#main section.on{display: block}
+
+#main {
+    #header{width: 100%;height: 100%}
+    #footer{position: absolute;top: 10px;left: 10px;width: 200px;z-index: 40;
+        button{background: #000;color: #fff;width: 100%;padding: 5px 0;border-radius: 3px;font-weight: 700;letter-spacing: 1px;position: relative;z-index: 60}
+        >div{position: absolute;top: 28px;left: 0;font-size: 14px;width: 100%;padding: 20px 0;background: rgba(0, 0, 0, 0.5);border-radius: 0 0 3px 3px;display: none}
+        >div li{text-indent: 20px;padding-bottom: 5px;margin-bottom: 9px;position: relative}
+        >div li:after{content: "";bottom: 0;left: 10%;width: 80%;border-top: 1px dotted #fff;position: absolute}
+        >div li:last-child:after{display: none}
+        .cl_ft{position: absolute;right: 10px;bottom: 10px;text-indent: -9999px;width: 20px;height: 20px;background: url("../img/clbtn.png") no-repeat;background-size: cover;z-index: 99}
+    }
+    #Skill{top: 100%;left: 0;background-color: #fff;
+        .tab_btn{width: 100%;height: 100%;z-index:80;position:absolute;@include tr(1s,height);top: 0;left: 0;background: url("../img/Skill_bg.jpg")no-repeat center top}
+        .tab_btn.on{height: 10%;background: none}
+        .tab_btn.on button{background: none;color: #666;text-shadow: none}
+        .tab_btn:after{content: "";clear: both;display: block}
+        .tab_btn li{width: 16.66667%;height: 100%;float: left}
+        .tab_btn button{width:100%;height: 100%;@include tr(1s,all);color: #fff;font-weight: 700;font-size: 20px;text-shadow: 3px 3px 30px #000}
+        .tab_btn li.on button{opacity: 1}
+        .tab_btn button.on,.tab_btn button:focus,.tab_btn button:hover{color: #fff}
+        .tab_btn{
+            li:nth-child(1) {
+                button{background-color:rgba(255, 255, 255, 0.3)}
+                button:hover,button:focus,button.on{background-color: rgba(177, 0, 0, 0.5)}
+            }
+            li:nth-child(2) {
+                button{background-color:rgba(238, 238, 238, 0.3)}
+                button:hover,button:focus,button.on{background-color: rgba(222, 109, 0, 0.5)}
+            }
+            li:nth-child(3) {
+                button{background-color:rgba(221, 221, 221, 0.3)}
+                button:hover,button:focus,button.on{background-color: rgba(231, 183, 3, 0.5)}
+            }
+            li:nth-child(4) {
+                button{background-color:rgba(204, 204, 204, 0.3)}
+                button:hover,button:focus,button.on{background-color: rgba(17, 141, 17, 0.5)}
+            }
+            li:nth-child(5) {
+                button{background-color:rgba(187, 187, 187, 0.3)}
+                button:hover,button:focus,button.on{background-color: rgba(29, 38, 187, 0.5)}
+            }
+            li:nth-child(6) {
+                button{background-color:rgba(170, 170, 170, 0.3)}
+                button:hover,button:focus,button.on{background-color: rgba(147, 0, 147, 0.5)}    
+            }
+        }
+        .tab_btn.on{
+            li:nth-child(1) {
+                button{background-color:rgb(255, 255, 255)}
+                button:hover,button:focus,button.on{background-color: rgba(177, 0, 0, 0.9)}
+            }
+            li:nth-child(2) {
+                button{background-color:rgb(238, 238, 238)}
+                button:hover,button:focus,button.on{background-color: rgba(222, 109, 0, 0.9)}
+            }
+            li:nth-child(3) {
+                button{background-color:rgb(221, 221, 221)}
+                button:hover,button:focus,button.on{background-color: rgba(231, 183, 3, 0.9)}
+            }
+            li:nth-child(4) {
+                button{background-color:rgb(204, 204, 204)}
+                button:hover,button:focus,button.on{background-color: rgba(17, 141, 17, 0.9)}
+            }
+            li:nth-child(5) {
+                button{background-color:rgb(187, 187, 187)}
+                button:hover,button:focus,button.on{background-color: rgba(29, 38, 187, 0.9)}
+            }
+            li:nth-child(6) {
+                button{background-color:rgb(170, 170, 170)}
+                button:hover,button:focus,button.on{background-color: rgba(147, 0, 147, 0.9)}    
+            }
+        }
+        
+        article{position: absolute;width: 100%;height: 90%;top: 10%;left: 0;display: none;@include boxsize(border-box);padding-top: 5%;overflow: auto}
+        article.tab1{background:#b10000}
+        article.tab2{background:#de6d00}
+        article.tab3{background:#e7b703}
+        article.tab4{background:#118d11}
+        article.tab5{background:#1d26bb}
+        article.tab6{background:#930093}
+        
+        h3{font-size: 4em;position: relative;left: -100px;@include tr(1s,all);margin-bottom: 15px}
+        
+        .col1,.col2{}
+        .col1{width: 75%;padding-bottom: 10%}
+        .col2{padding: 5% 0 5%} 
+            
+        .col1 p{font-size: 1.5em;position: relative;left: -100px;@include tr(1s,all);padding-bottom: 40px}
+        .col1 .list{padding: 50px 100px;background: rgba(0, 0, 0, 0.27);
+            h4{font-size: 1.3em;font-weight: 900;margin-bottom: 15px}
+            dl{width: 100%}
+            dt{position: relative;padding-bottom: 5px;margin-bottom: 5px}
+            dt span{border-bottom: 3px solid #fff}
+            dd{margin-bottom: 10px;padding-bottom: 5px;border-bottom: 1px dotted #fff}
+            dd span{display: block}
+        }
+        .col2 .img_box{padding: 5% 0;height: 350px;text-align: center;
+            li{width: 30%;display: inline-block;margin-left: 3%;height: 100%;vertical-align: top}
+            li:first-child{margin-left: 0}
+            div{width: 100%;max-height: 300px;overflow: auto}
+            strong{display: block;height: 50px;line-height: 50px;text-align: center}
+        }
+        .col2 .img_txt{width: 100%;;margin-bottom: 30px;
+            h4{text-align: center;width: 150px;font-size: 25px;height: auto;margin: 0 auto}
+            h4 span{display: block; width: 150px;height: 150px;margin-top: 20px;line-height: 140px;margin-bottom: 20px;@include boxsize(border-box);border: 5px solid rgba(0, 0, 0, 0.62);border-radius: 100%;font-size: 20px;background: rgba(255, 255, 255, 0.21)}
+            p{font-size: 20px;font-weight: 700;text-align: center}
+        }
+        article.on{
+            h3{left: 5%}
+            .col1 p{left: 5%}
+        }
+        .tab_cl.on{top: 15%}
+    }
+    #Skill,#PJ,#AC{z-index: 80}
+    #PJ,#AC{right: -100%;top: 0;background: #ffffff}
+    #PJ{color:#00C2D9;background: url("../img/PJ_bg.jpg") no-repeat right top;background-size: cover;    
+        .tab_btn{float: left;width: 40%;height: 100%}
+        .tab_btn li{width: 50%;height: 33.33333%;float: left}
+        .tab_btn li button{width: 100%;height: 100%;background: rgba(0, 0, 0, 0.7);@include tr(1s,all);
+            span{width: 80%;line-height: 2;border: 1.5px solid #00c2d9;display: block;margin: 0 auto}
+        }
+        .tab_btn li button:hover,.tab_btn li button:focus,.tab_btn li.on button{background: #00c2d9;color: #fff;
+            span{border: 1.5px solid #fff}
+        }
+        article{opacity: 0;width: 60%;height: 100%;overflow: auto;background-size: cover;position: absolute;top: 0;right: -30%;display: none;color: #fff;padding: 5% 2.5% 0;@include boxsize(border-box);@include tr(1s,all);
+            h3{font-size: 40px;margin-top: 5%;margin-bottom: 10%;}
+            h3 span{padding: 2.5% 5%;border: 5px solid #fff}
+            .col1, .col2{width: 100%;box-sizing: border-box;margin-bottom: 10%}
+            .col1 p{font-size: 15px}
+            .col2>p{font-size: 15px}
+            h4{font-size: 25px;margin-bottom: 20px}
+            p{font-size: 18px;margin-bottom: 40px}
+            li{padding-bottom: 5%;border-bottom: 1px dotted #fff}
+            li strong{font-size: 25px;padding: 3px 5px;border: 3px solid #fff;margin-bottom: 40px;display: inline-block;margin-top: 40px}
+            li p{font-size: 14px;line-height: 1.5;}
+            p span{display: block;font-weight: 700;padding-bottom: 30px;position: relative;margin-bottom: 60px;margin-top:40px;font-size: 18px}
+            p span:after{content: "";position: absolute;bottom: 0;left: 0;height: 3px;width: 40px;background: #fff}
+            .link{width: 100%;text-align: center;margin: 20% 0 10%}
+            .link a{display: inline-block;padding: 7px 10px;border: 1px solid #fff;font-size: 16px;@include tr(0.6s,all);margin: 0 10px}
+            .link a:hover,.link a:focus{border-color: #00c2d9;background: #fff;color: #00c2d9}
+        }
+        article.on{display: block}
+        article.on.move{right: 0;opacity: 1}    
+    }
+    #AC{background-color: #000;
+        .tab_btn{position: absolute;top: 5%;left: 5%;z-index: 90}
+        .tab_btn li{float: left;margin:5px 5px}
+        .tab_btn li button{display: block;padding: 5px 10px;font-weight: 700;border: 1px solid #fff;@include border_RD(3px,3px,3px,3px);@include tr(1s,all)}
+        .tab_btn li button.on,.tab_btn li button:hover,.tab_btn li button:focus{background: #fff;color: #333}
+        article{width:100%;height: 100%;position: absolute;left: 0;right: 0;top: 0;bottom: 0;overflow: auto;display: none;background-size: cover;background: url("../img/webAS_bg.jpg") no-repeat right center}
+        article.on{display: block}
+        .cnt1 .col1:after{background-color: #b10000}
+        .cnt2 .col1:after{background-color: #de6d00}
+        .cnt3 .col1:after{background-color: #e7b703}
+        .cnt4 .col1:after{background-color: #118d11}
+        .cnt5 .col1:after{background-color: #1d26bb}
+        .cnt6 .col1:after{background-color: #930093}
+        .col1{float: left;width: 40%;height: 100%;display: table;position: relative}
+        .col1:after{content: "";width: 10%;height: 0%;position: absolute;left: 0;@include tr(1s,all);top: 0}
+        .col2{float: left;width: 60%;height: 100%;display: table;transform: translateY(-300px);opacity: 0;@include tr(1s,all)}
+        .col1 .table{padding: 0 10%;opacity: 0;@include tr(1s,all)}
+        .col1 h3{font-size: 35px;text-align: center;margin-bottom: 20px}
+        .col1 p{text-align: center;padding: 0 3%;line-height: 1.5}
+        .table{display: table-cell;vertical-align: middle}
+        .col2 .table{padding-left: 10%}
+        .table>strong{font-size: 14px;display: block;margin-top: 30px}
+        .table>strong span{display: inline-block;padding-bottom: 10px;border-bottom: 5px solid #fff}
+        .table ul {padding-top: 50px}
+        
+//        .cnt1 .table ul li strong{color: #777777}
+        
+        .table1 ul li{padding: 10px 0;border-bottom: 1px dotted #fff;margin-bottom: 5px;width: 750px}
+        .table1 ul li strong{width: 80px;border-right: 1px solid #fff;display: inline-block;padding-right: 10px;margin-right: 10px}
+        .table1 ul li span{display: inline-block;font-size: 15px}
+        .table1 ul li .text1{width: 300px;margin-right: 10px}
+        .table1 ul li .text2{width: 300px}
+        
+        article:not(.cnt1) .col2{
+            ul li{padding: 50px 10px 50px 250px;background: #000;margin-top:2%;box-sizing: border-box;height: 200px;position: relative;font-size: 14px;line-height: 1.5}
+            ul li:after{content:"";background: no-repeat center center;width: 200px;height: 200px;left: 0;top: 0px;position: absolute;}
+            ul li:first-child{margin-top: 0}
+            ul {width: 80%}
+            ul li strong{display: block;font-size: 16px;margin-bottom: 10px;line-height: 1}
+        }
+        .cnt2 .col2 ul li:nth-child(1):after{background-image: url("../img/AS2_1.gif")}
+        .cnt2 .col2 ul li:nth-child(2):after{background-image: url("../img/AS2_2.gif")}
+        .cnt2 .col2 ul li:nth-child(3):after{background-image: url("../img/AS2_3.gif")}
+        .cnt3 .col2 ul li:nth-child(1):after{background-image: url("../img/AS3_1.gif")}
+        .cnt3 .col2 ul li:nth-child(2):after{background-image: url("../img/AS3_2.gif")}
+        .cnt3 .col2 ul li:nth-child(3):after{background-image: url("../img/AS3_3.gif")}
+        .cnt4 .col2 ul li:nth-child(1):after{background-image: url("../img/AS4_1.gif")}
+        .cnt4 .col2 ul li:nth-child(2):after{background-image: url("../img/AS4_2.gif")}
+        .cnt4 .col2 ul li:nth-child(3):after{background-image: url("../img/AS4_3.gif")}
+        .cnt5 .col2 ul li:nth-child(1):after{background-image: url("../img/AS5_1.gif")}
+        .cnt5 .col2 ul li:nth-child(2):after{background-image: url("../img/AS5_2.gif")}
+        .cnt6 .col2 ul li:nth-child(1):after{background-image: url("../img/AS6_1.gif")}
+        .cnt6 .col2 ul li:nth-child(2):after{background-image: url("../img/AS6_2.gif")}
+    }
+    #AC.on{
+        article.on.move{
+            .col1 .table{opacity: 1}
+            .col1:after{height: 100%}
+            .col2{transform: translateY(0px);opacity:1}
+
+        }
+    }
+    
+    #OP_Skill,#OP_PJ,#OP_AC{position: absolute}
+    #OP_Skill{bottom:0px;height: 100px;right: 0;left: 0;margin: 0 auto;width: 200px;line-height: 80px;text-align: center}
+    #OP_Skill:after{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url("../img/round.png") left top;content: "";z-index: -1;}
+    #OP_Skill:before{content: "";position: absolute;top: 20px;left: 50%;border-bottom: 5px solid #fff;border-right:5px solid transparent;border-left:5px solid transparent;margin-left: -2.5px}
+    #OP_PJ{top:0;right:0;width: 100px;height: 50%;background: #000}
+    #OP_AC{top:50%;right:0;width: 100px;height: 50%;background: #363636}
+}
+
+//@media control bsise tag(pc) media tag(mobile)
+@media all and (min-width:766px) and (max-width:1350px) {
+    #main #AC article:not(.cnt1) .col2 ul{width: 90%}
+    #main #AC article:not(.cnt1) .col2 ul li{padding: 30px 10px 50px 250px}
+}
+@media all and (min-height:768px)and (max-height:1000px) {
+    #main #AC .table > strong{margin-top: 60px}   
+    #main #AC .table ul{padding-top: 5px}
+}
+
+@media all and (max-width:1200px) {
+    #main #AC{
+         .col1{float: none;width: 100%;height: 30%;padding-top: 15%}
+         .col2{float: none;width: 100%;height: 70%}
+         .table1 ul{padding-bottom: 20%}
+         .table1 ul li{padding: 0  2%;width: 100%;}
+         .table1 ul li strong{width: auto;border: none;display: block;margin-bottom: 10px;color: #349aff}
+         .table1 ul li span{display: block;font-size: 13px;line-height: 1.5}
+         .table1 ul li .text1{width: 300px;margin-right: 10px}
+         .table1 ul li .text2{width: 300px}
+        }
+    #main #AC.on article.on.move .col1:after{height: 400%}
+
+}
+@media all and (max-width:765px) {
+    #main #time{font-size: 18px}
+    #main .logtxt{
+    #mainTxt{font-size: 40px;letter-spacing: 1px}
+    #round6 button{letter-spacing: 0px;font-size: 12px;line-height: 1.5}
+    }
+    #main .mini_text{font-size: 14px}
+    
+    #main{
+        #OP_PJ,#OP_AC{right:0;width: auto;height: auto;width: 80%;padding: 3% 0;left:0;margin:0 auto;border-radius: 4px}
+        #OP_PJ{top:60%}
+        #OP_AC{top:70%}
+        #footer{display: none}
+        
+        section{
+           .tab_cl{width:30px;height: 30px;right: 5%;top: 3%}
+        }
+        #Skill{
+            .tab_btn li{width: 100%;height: 16.66667%;float: none}
+            .tab_btn.on li{width: 16.66667%;height: 100%;float: left}            
+            .tab_btn.on button{font-size: 12px}
+            h3{font-size: 30px}
+        
+        .col1{width: 90%;padding-bottom: 10%}
+        .col1 p{font-size: 16px}
+        .col1 .list{padding: 10px 20px;
+            dd{font-size: 13px}
+        }
+        .col2 .img_box{padding: 5% 0;height: 350px;text-align: center;
+            li{width: 100%;display:block;margin-left: 0%}
+            li{margin-bottom: 10%}
+            strong{line-height: 25px;font-size: 14px}
+        }
+    }
+        #PJ{    
+            .tab_btn{float: left;width: 20%;overflow: auto;height: 100%}
+            .tab_btn li{width: 100%;height: 33.33333%;float: none}
+            .tab_btn li button{
+                span{font-size: 14px}
+            }
+            article{width: 80%;
+                h3{font-size: 18px;margin-bottom: 30%}
+                h4{font-size: 25px;margin-bottom: 20px}
+                p span{margin-bottom: 30px;margin-top:20px}
+                .link a{padding: 3px 4px;border: 1px solid #fff;font-size: 12px}
+            }
+        }  
+        #AC{background-color: #000;
+            .tab_btn{position:static;height: 10%;width: 100%;overflow: auto;font-size: 14px}
+            .tab_btn ul{height: 100%;text-align: center}
+            .tab_btn li{width: 200px;display: inline-block}
+            .tab_btn li button{width: 100%;height: 100%;padding: 10px 0}
+            article{height: 90%;top: 10%}
+            .col1{padding-top: 0}
+            .col1 p{font-size: 14px;text-align: left}
+            .col2 .table{width: 100%;padding-left: 0}
+
+            article:not(.cnt1) .col2{
+                ul li{padding:260px 2% 40px;margin-top:20%;height: auto;}
+                ul li:after{width: 200px;left: 0;right: 0;margin: 0 auto;top: 40px}
+                ul li:first-child{margin-top: 0}
+                ul {width: 100%}
+                ul li strong{display: block;font-size: 16px;margin-bottom: 10px;line-height: 1}
+            }
+        }
+        
+        #AC.on article.on.move .col1:after{height: 100%}
+        }
+    
+//    #main #bgbox{display: none}
+}
+

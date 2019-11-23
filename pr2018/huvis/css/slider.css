@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+
+/* 태그 초기화  */
+body, ul{margin: 0;padding: 0;}
+body{font-family: NotoSans;font-size: 16px;color: #666;font-weight: 400}
+ul{list-style: none}
+a{text-decoration: none}
+a:link, a:visited, a:hover, a:active{color: inherit}
+
+/* bxslider 슬라이더 */
+.bxslider{position: relative;width: 100%;height: 790px;}
+.bxslider .visual li{height: 790px;background: no-repeat 50% 0;text-align: center;color: #fff}
+.bxslider .visual .list1{background-image: url("../images/main/bg_visual1.png")}
+.bxslider .visual .list2{background-image: url("../images/main/bg_visual2.png")}
+.bxslider .visual .list3{background-image: url("../images/main/bg_visual3.png")}
+.bxslider .visual .list4{background-image: url("../images/main/bg_visual4.png")}
+.bxslider .visual li p{font-size: 34px;line-height: 52px;padding-top: 192px}
+.bxslider .visual li p span{display: block;font-size: 50px;font-weight: 500}
+
+.bxslider .bx-controls .bx-controls-direction a, .bxslider .bx-controls .bx-controls-auto, .bxslider .bx-controls .bx-pager{z-index: 100}
+/* 이전, 다음 버튼 */
+.bxslider .bx-controls .bx-controls-direction a{position: absolute;top: 312px;width: 54px;height: 53px;text-indent: -9999px}
+.bxslider .bx-controls .bx-controls-direction .bx-prev{left: 20px;background: url("../images/main/btn_prev.png") no-repeat}
+.bxslider .bx-controls .bx-controls-direction .bx-next{right: 20px;background: url("../images/main/btn_next.png") no-repeat}
+
+/* play, stop 버튼, 인디케이터 공통  */
+.bxslider .bx-controls .bx-controls-auto, .bxslider .bx-controls .bx-pager{position: absolute;top: 550px;left: 50%}
+.bxslider .bx-controls .bx-controls-auto a, .bxslider .bx-controls .bx-pager a{text-indent: -9999px}
+
+/* play, stop 버튼 */
+.bxslider .bx-controls .bx-controls-auto{margin-left: 36.5px;margin-top: -6px}
+.bxslider .bx-controls .bx-controls-auto a.active{display: none}
+.bxslider .bx-controls .bx-controls-auto a{display: block;width: 27px;height: 27px;background: url("../images/main/btn_pause_play.png") no-repeat}
+.bxslider .bx-controls .bx-controls-auto a.bx-start{ background-position: -27px 0}
+.bxslider .bx-controls .bx-controls-auto a.bx-stop{ background-position: 0 0}
+
+
+/* 인디케이터 */
+.bxslider .bx-controls .bx-pager{margin-left:-63.5px;width: 100px}
+.bxslider .bx-controls .bx-pager div{float: left;margin-right: 10px}
+.bxslider .bx-controls .bx-pager div a{display: block;width: 11px;height: 11px;-webkit-border-radius: 7.5px;-moz-border-radius: 7.5px;border-radius: 7.5px;border: 2px solid #fff;}
+.bxslider .bx-controls .bx-pager a.active{background: #fff}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

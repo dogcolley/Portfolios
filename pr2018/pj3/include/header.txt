@@ -1,0 +1,4 @@
+        <div class="area clear">
+            <h1 id="log"><a href="/pr/pj3" class="txt_indent">Metro See</a></h1>
+            <button type="button" id="menuBtn">메뉴</button>
+        </div>

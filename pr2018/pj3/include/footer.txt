@@ -1,0 +1,27 @@
+            <div class="area">
+                <h2 id="footLog"><img alt="메트로시 : 풋터,정보" width="738" height="284" src="../img/common/log2.png"></h2>
+                <ul class="col1">
+                    <li><a href="">about us</a></li>
+                    <li><a href="">About This Site</a></li>
+                    <li><a href="">Travel Trade &amp; Press</a></li>
+                    <li><a href="">Educational Trips</a></li>
+                    <li><a href="">Business Events</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                    <li><a href="">Links</a></li>
+                    <li><a href="">Font Size and Color</a></li>
+                    <li><a href="">Sitemap</a></li>
+                    <li><a href="">Airline</a></li>
+                    <li><a href="">Korea National Tax Service</a></li>
+                    <li><a href="">Ministry of Culture, Sports and Tourism</a></li>
+                </ul>          
+                <div class="col2"><button type="button" id="langBtn">Change Language</button>
+                    <ul>
+                        <li><a href="">한국어</a></li>
+                        <li><a href="">Englch</a></li>
+                        <li><a href="">中國語</a></li>
+                        <li><a href="">اللغة العربية</a></li>
+                    </ul>
+                </div>
+                <div class="col3"><a href="" class="list1">Face book</a><a href="" class="list2">twiter</a><a href="" class="list3">youtube</a></div>
+                <div class="col4">colley &copy; Publishing student by High Media</div>                 <button type="button" id="topBtn">Top</button>
+            </div>

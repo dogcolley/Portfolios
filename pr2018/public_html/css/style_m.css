@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+body,html,h1,h2,h3,h4,h5,button,p,ul,ol,dl,dd{margin:0;padding:0}
+h1,h2,h3,h4{font-size: inherit}
+li{list-style:none}
+body{font-size:16px;font-weight:400;color: #666;background:#ededed;font-family:"Noto Sans KR";font-size: 16px;letter-spacing: -0.5px}
+button{border:none;background:none;cursor:pointer}
+a{text-decoration:none}
+a:link,a:visited,a:hover,a:active{color:inherit;font-size:inherit}
+img{width:100%;height:auto;border:none;vertical-align:top}
+address{font-style: normal}
+select{color:inherit}
+table{border-spacing:0px;border-collapse:collapse}
+
+#main #content{position: relative;background: url("../img/pc/main_bg.jpg")no-repeat right bottom}
+#main #content h2{padding-top: 85px;font-weight: 200;font-size: 28px;color: #21314a}
+#main #content h2 span,#main #content h2 strong{font-size: 40px}
+#main #content h2 .mask{background: #21314a;color: #fff;font-size: 28px;padding: 0 5px;display:inline-block;height:42px;font-weight:300}
+#main #content .utile{position: absolute;top: 0px;left: 0}
+#main #content .utile li{float: left;font-size: 12px;width: 30px;padding-top: 35px;color: #21314a;margin-left: 10px;position: relative;text-align: center}
+#main #content .utile li:first-child{margin: 0}
+#main #content .utile li:after{content: "";position: absolute;top: 0;left: 0;width: 30px;height: 30px;background: no-repeat center}
+#main #content .utile li.list1:after{background-image: url("../img/pc/icon_utile1.png")}
+#main #content .utile li.list2:after{background-image: url("../img/pc/icon_utile2.png")}
+#main #content .utile li.list3:after{background-image: url("../img/pc/icon_utile3.png")}
+#main #content .utile li.list4:after{background-image: url("../img/pc/icon_utile4.png")}
+
+#main #content>p{padding: 20px 0 30px}
+#main #content>a{line-height: 45px;padding: 0 50px;background: #21314a;color: #fff;font-size: 15px;text-align: center;display: inline-block}
+    
+/*모바일 요소 제어*/
+	body {background:#fff;	width:100%}
+	.area{width:100%;padding:0 6.25%;box-sizing:border-box;padding-top:40px}
+	
+	/* header_m */
+	#header_m{border-top:10px solid #1f3149;/*display:none*/}
+	#header_m>*{float:left}
+	#header_m>h1{width:31.5%}
+	#header_m>nav{width:68.5%}
+	#header_m>nav li{box-sizing:border-box;border-bottom:1px solid #d9d9d9;height:25%}
+	#header_m>nav li.gmbr{border-right:1px solid #d9d9d9}
+	#header_m:after{content:"";clear:both;display:block}
+	#gnb_m ul{height:100%}
+	#gnb_m ul:after{content:"";display:block;clear:both}
+	#gnb_m ul li{float:left;width:50%;text-align:center}
+	#gnb_m ul li a{color:#333;font-size:1.5em}
+	#gnb_m ul li.on a{color:#1eadf2;font-weight: 600;}
+	#gnb_m ul li:last-child{width:100%}
+	
+	/*CS_m  */
+	#CS_M{position:relative;margin:20px 0}
+	#CS_M>div{position:absolute;top:0;left:0;height:100%;width:100%;padding:7% 6%;box-sizing:border-box}
+	#CS_M>div>div{float:left}
+	#CS_M>div>.list_cs{width:40%;text-align:center;font-size:1.4em;border-right:1px solid #d9d9d9;box-sizing:border-box;display:table;height:100%}
+	#CS_M>div>.list_cs div{display:table-cell;vertical-align:middle;height:100%}
+	#CS_M>div>.list_cs img{width:40%;display:block;margin:0 auto;margin-bottom:2%}
+	#CS_M>div>.list_cs span{color:red}
+	#CS_M>div>.list_ad{width:60%;box-sizing:border-box;padding-left:9%;display:table;height:100%}
+	#CS_M>div>.list_ad div{display:table-cell;vertical-align:middle;height:100%}
+	#CS_M>div>.list_ad strong{display:block}
+	#CS_M>div>.list_ad .list1{font-size:2em;color:#21314a;margin-bottom:2%;font-family: "Montserrat";font-weight: 800}
+	#CS_M>div>.list_ad .list2{font-size:0.9em;font-weight: 400}
+	#CS_M>div>.list_ad .list2 span{line-height:2.5;background:#21314a;color:#fff;padding:1% 4%;border-radius:16px;margin-right:2%}
+	
+
+	/* #footer_m */
+	#footer_m {padding:5%;box-sizing:border-box	;font-size:1em;border-top:1px solid #d9d9d9;color:#707070;line-height:1.8;position:relative}
+	#footer_m .list3{color:#a4a4a4}
+	#footer_m a{position:absolute;right:5%;top:50%;font-size:1.1em;line-height:2;padding:0 5%;border:1px solid #d9d9d9;border-radius:25px;margin-top:-22.5px;text-align:center;width:55px}
+
+	/* section */
+	#content{padding:0;margin:0;width:auto}
+	#content.sub{padding:30px 0 0 0;margin:0}
+
+	/* main_m */ 
+	#main #content{background:none;padding:10px 0 20px 0px}
+	#main #content h2{font-size:2em;margin-bottom:25px;line-height:1.5;padding-top:45px}
+	#main #content h2 span ,#main #content h2 strong{line-height:2;font-size:1.5em}
+	#main #content h2 .mask{font-size:1em;height:auto;line-height:1.5}
+	#main #content p{font-size:1.2em}
+	#main #content .a_wrap{position:relative;font-size:1em;} 
+	#main #content .a_wrap a{position:absolute;left:0;top:20px;color:#fff;background:#21314a;font-size:1.5em;line-height:1;padding:2%}
+	
+	/* sub_m */
+	body:not(#main) #content h2{font-size:2.9375em;text-align:center;line-height:1;padding-bottom:40px;color:#21314a}
+	.m_content .subtit_m{font-size:22px;line-height:1;display:block;color:#000;font-weight:400;margin-bottom:5%}
+	.m_content .subtit_m img{height:auto;width:auto;margin-right:2%}
+
+	#sub01 .dep2_list {padding-bottom:30px}
+	#sub01 .dep2_list:after{content:"";clear:both;display:block}
+	#sub01 .dep2_list li{float:left;width:50%;box-sizing:border-box;border:1px solid #d9d9d9;text-align:center;font-size:1.5625em;line-height:2.5	}
+	#sub01 .dep2_list li.on{border:0;background:#1eadf2;color:#fff}
+	#sub01 .dep2_list li{display:block}
+	#sub01 .m_content div>strong{display:block;padding:40px 0 30px;font-size:2em;font-weight:300;color:#000	}
+	#sub01 .m_content div>strong span{color:#1eadf2;font-weight:600}
+	#sub01 .m_content div>p{font-size:1.25em}
+	#sub01 .m_content div>p *{display:block;margin-top:3%;color:#676767}
+	#sub01 .m_content div>p span:first-child{;margin-top:0}
+	#sub01 .m_content div>p strong{margin-top:5%}
+	#sub01 .m_content div>p .cr_333{color:#333}
+	#sub01 .sub1_2m ul{position:absolute;left:-9999px}
+	#sub01 .sub1_2m .img1{margin-bottom:5%}
+	#sub01 .sub1_2m .img2{margin-bottom:10%}
+
+	#sub02 .m_content >div{position:relative;margin-bottom:5%}
+	#sub02 .m_content >div p{position:absolute;top:0;left:0;box-sizing:border-box;padding:7%;font-size:1.25em;width:100%}
+	#sub02 .m_content >div p *{display:block}
+
+	#sub03 .m_content >div{position:relative;margin-bottom:5%}
+	#sub03 .m_content >div p{position:absolute;top:0;left:0;box-sizing:border-box;padding:7%;font-size:1.25em;width:100%}
+	#sub03 .m_content >div p *{display:block}
+
+	#sub03 .m_content>ul>li{border:1px solid #d9d9d9;margin-top:3%;box-sizing:border-box}
+	#sub03 .m_content>ul>li strong{display:block;border-bottom:1px solid #d9d9d9;font-size:20px;padding: 0 8%;line-height:3;font-weight:400;color:#333;position:relative}	
+	#sub03 .m_content>ul>li strong img{width:auto;vertical-align:middle;margin-right:1%}
+	#sub03 .m_content>ul>li ul{background:#f9f9f9;color:#777;font-size:17px;padding:3% 0}
+	#sub03 .m_content>ul>li ul li{padding-left:15%;line-height:1.7;position:relative}
+	#sub03 .m_content>ul>li ul li:after{content:"";position:absolute;top:50%;height:1px;width:4px;background:#777;left:12%;margin-top:-0.5px}
+
+	#sub04 .m_content p{margin-bottom:25px;color:#777;line-height:1.7}
+	#sub04 .m_content p span{display:block;font-size:17px;margin-top:10px}
+	#sub04 .m_content p span:first-child{margin-top:0}
+	#sub04 .m_content > img{margin-bottom:40px}
+	#sub04 .m_content .subtit_m2{font-size:20px;color:#333;margin-bottom:30px;line-height:1;display:block;padding-left:50px;position:relative}
+	#sub04 .m_content .subtit_m2:after{content:"";position:absolute;left:0;top:50%;;height:13px;width:35px;margin-top:-6.5px;border-radius:0 13px 13px 0;background: #1eadf2}
+/* 사이즈에 따라 밀려나는 글자를 제어하기 위한제어문 */
+@media (max-width: 719px) and (min-width: 680px){
+body{font-size:16px}
+}
+
+@media (max-width: 639px) and (min-width: 600px){
+body{font-size:15px}
+}
+
+@media (max-width: 559px) and (min-width: 520px){
+body{font-size:14.5px}
+}
+
+@media (max-width: 519px) and (min-width: 480px){
+body{font-size:14px}
+}
+
+@media (max-width: 479px){
+body{font-size:13px}
+}
+
+@media (max-width: 440px){
+body{font-size:12px}
+}
+@media (max-width: 400px){
+body{font-size:11px}
+}
+@media (max-width: 330px){
+body{font-size:10px}
+
+#CS_M>div>.list_ad{padding-left:6.5%}
+
+}
+
+
+
+ 
+
+
+
+
+
+

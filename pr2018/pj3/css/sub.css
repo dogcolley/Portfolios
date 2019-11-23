@@ -1,0 +1,425 @@
+@charset "utf-8";
+
+/* sub footer */
+
+/* sub maskWrap*/
+#maskWrap{width: 100%;height: 100%;transition: 0.6s all;transform: scale(1)}
+
+/* sub allStation page*/
+#stationMenu{background: #eaeaea}
+#stationMenu #content{margin-top: 150px}
+#stationMenu h2{font-size: 28px;font-family: "NS_G";color: #222633}
+#stationMenu article{padding: 100px 0}
+#stationMenu article h3{text-align: center;margin-bottom: 50px;font-size: 20px;padding: 20px 30px;border:5px solid;font-weight: 900;border-radius: 40px;background-color: #fff}
+#stationMenu #cnt1 h3{border-color: #213487;color: #213487}
+#stationMenu #cnt2 h3{border-color: #40ae43;color: #40ae43}
+#stationMenu #cnt3 h3{border-color: #ebab01;color: #ebab01}
+#stationMenu article ul{width: 100%}
+#stationMenu article ul:after{clear: both;content: "";display: block}
+#stationMenu article ul li{width: 20%;float: left;height: 100px;line-height: 100px;text-align: center;position: relative;margin-bottom: 1px;opacity: 0;transition: 0.8s all}
+#stationMenu #cnt1 ul li a{background: #213487}
+#stationMenu #cnt2 ul li a{background: #40ae43}
+#stationMenu #cnt3 ul li a{background: #ebab01}
+#stationMenu article ul li a{display: block;margin: 1px;color: #fff;font-weight: 700;font-size: 20px;transition: 0.6s all}
+#stationMenu article ul li a:hover,#stationMenu article ul li a:focus{letter-spacing: 5px}
+#stationMenu article ul li a:after{content: "";position: absolute;border-left: 5px solid transparent;border-bottom: 5px solid ;border-right: 5px solid transparent;top: 50%;margin-top: 20px;left: 50%;margin-left: -5px;opacity:0;transition: 1s all}
+#stationMenu #cnt1 ul li a:after{border-bottom-color:#4568ff}
+#stationMenu #cnt2 ul li a:after{border-bottom-color:#9ee3a0}
+#stationMenu #cnt3 ul li a:after{border-bottom-color:#fddf8d}
+#stationMenu article ul li a:hover:after,#stationMenu article ul li a:focus:after{margin-top: 12px;opacity: 1}
+
+/*     sub station page */
+#station{overflow: hidden;background: url("../img/station/bg3.jpg") no-repeat center bottom;background-size: cover}
+/*#station{overflow: hidden}*/
+#station #content{width: 100%;height:100%;position: relative;z-index: 50;overflow: hidden;transition: 0.6s all;transform: scale(1);box-sizing: border-box}
+#station #content article{height: 100%;width: 100%;position: absolute;left: 0;bottom: 0}
+
+#station #cnt1{background-color:rgba(255, 0, 0, 0.05) ;z-index: 80}
+#station #cnt2{background-color:rgba(255, 165, 0, 0.05);z-index: 79}
+#station #cnt3{background-color:rgba(0, 128, 0, 0.05);z-index: 78}
+#station #cnt4{background-color:rgba(0, 0, 255, 0.05);z-index: 77}
+#station #cnt5{background-color:rgba(138, 43, 226, 0.05);z-index: 76}
+
+#station #location{font-family: "NS_G"; position: absolute;z-index: 95;bottom: 60px;right: 9%;color: #fff;font-weight: 700;font-size: 45px}
+#station #location #indBtn{height: 100%;height: 30px;position: absolute;bottom: 5px;left: -30px;font-size: 30px}
+#station #location #indCl{position: absolute;height: 100%;height: 30px;font-size: 30px;right: 0;bottom: 10px}
+#station #location .ind_menu{position: absolute;bottom: -5px;right: 120%;height: 100%;width: 110px;overflow: hidden;width: 0;display: none}
+#station #location button{color: #fff}
+#station #location ul:after{content: "";display: block;clear: both}
+#station #location li{float: left;margin-left: 10px;font-size:40px}
+#nowNum{transition: 1s all}
+
+#station #pageMove {position:absolute;z-index: 95;bottom: 60px;left: 9%}
+#station #pageMove *{text-indent: -9999px;position: absolute;bottom: 0;width: 60px;height: 60px;border-radius: 100%;background: no-repeat center;background-size: cover;transition: 0.8s all}
+#station #nextBtn{left: 80px;background-image: url("../img/common/downbtn.png")}
+#station #nextBtn:hover,#station #nextBtn:focus{background-image: url("../img/common/downbtn2.png")}
+#station #prevBtn{left: 0px;background-image: url("../img/common/upbtn.png");display: none}
+#station #prevBtn:hover,#station #prevBtn:focus{background-image: url("../img/common/upbtn2.png")}
+
+/* section content cnt control */
+#station #content  .col1 ,#station #content  .col2 {opacity: 0;transition: 2s all;position: relative}
+#station #content article.on .col1 ,#station #content article.on .col2{opacity: 1}
+
+#station article .area:after{content: "";clear: both;display: block}
+#station #cnt1 {color: #FFF}
+#station #cnt1 .col1{float: right;font-family: "NS_G";padding-top: 60px;margin-right: 2%;right: -5%}
+#station #cnt1.on .col1{right: 0}
+#station #cnt1 .col1 *{text-align: right}
+#station #cnt1 .col1 h3{font-size: 45px}
+#station #cnt1 .col1 span{display: block;padding: 10px 0 20px}
+#station #cnt1 .col1>span{font-weight: 900;font-size: 20px}
+#station #cnt1 .col2{float: left;background: rgba(0, 0, 0, 0.38);font-weight: 700;padding: 100px 50px 30px;margin-left: 4%;left: -5%}
+#station #cnt1.on .col2{left: 0}
+#station #cnt1 .col2:after{content: "";display: block;clear: both}
+#station #cnt1 .col2 p{line-height: 1.5;margin-bottom: 40px;letter-spacing: 1.5px}
+#station #cnt1 .col2 p span{display: block;margin-top: 60px}
+#station #cnt1 .col2 p span:first-child{margin-bottom: 40px;margin-top: 0}
+#station #cnt1 .col2 >a{float: left;line-height: 70px;font-size: 14px}
+#station #cnt1 .col2 >a span{padding-right: 10px;font-size: 20px;color: #2eb402}
+#station #cnt1 .col2 > ul{position: fixed;right: 12%}
+#station #cnt1 .col2 > ul li {display: inline-block;width: 80px;height: 70px;opacity: 0;transition: 1s all}
+#station #cnt1 .col2> ul .list1{transition-delay: 0.2s}
+#station #cnt1 .col2> ul .list2{transition-delay: 0.4s}
+#station #cnt1 .col2> ul .list3{transition-delay: 0.6s}
+#station #cnt1 .col2> ul .list4{transition-delay: 0.8s}
+#station #cnt1.on .col2 > ul li {opacity: 1}
+#station #cnt1 .col2 > ul li button{display: block;width: 100%;height: 100%;transition: 0.5s all;background: no-repeat center center;background-size: cover}
+#station #cnt1 .col2 > ul li button span{font-weight: 700}
+/*#station #cnt1 .col2 > ul li button:hover span,#station #cnt1 .col2 > ul li button:focus span{opacity: 1;left: 0}*/
+#station #cnt1 .col2 > ul li button:hover,#station #cnt1 .col2 > ul li button:focus{transform: scale(0.9)}
+#station #cnt1 .col2 > ul li.list1 button{background-image: url("../img/station/icon1.png")}
+#station #cnt1 .col2 > ul li.list2 button{background-image: url("../img/station/icon2.png")}
+#station #cnt1 .col2 > ul li.list3 button span{font-size: 10px}
+#station #cnt1 .col2 > ul li.list3 button{background-image: url("../img/station/icon3.png")}
+#station #cnt1 .col2 > ul li.list4 button{background-image: url("../img/station/icon4.png")}
+
+#station #cnt3 .col1{width: 100%;height: 450px;background: rgba(0, 0, 0, 0.8);padding: 100px 9% 50px;position: relative;box-sizing: border-box}
+#station #cnt3 h3{width: 100%;position: absolute;top: 30px;text-align: center;font-size: 25px;margin-top: 10px;color: #fff;left: 0;font-family: "NS_O"}
+
+#cnt3 #tabPrev,#cnt3 #tabNext{position: absolute;width: 40px;height: 60px;top: 48%;background: no-repeat left top}
+#cnt3 #tabNext {right:40px;background-image: url("../img/common/nextbtn.png")}
+#cnt3 #tabPrev {left:40px;background-image: url("../img/common/prevbtn.png")}
+#station .tab_box{width: 100%;height: 300px;overflow: hidden;position: relative}
+#station .tab_btn{width: 1600px;text-align: center;height: 300px}
+#station .tab_btn li{float: left;width: 300px;height: 100%;margin-right: 15px}
+#station .tab_btn li{background: no-repeat center top;background-size: cover}
+#station .tab_btn .list1{background-image: url("../img/station/cnt3_icon1.PNG")}
+#station .tab_btn .list2{background-image: url("../img/station/cnt3_icon2.PNG")}
+#station .tab_btn .list3{background-image: url("../img/station/cnt3_icon3.PNG")}
+#station .tab_btn .list4{background-image: url("../img/station/cnt3_icon4.PNG")}
+#station .tab_btn .list5{background-image: url("../img/station/cnt3_icon5.PNG")}
+#station .tab_btn button{display: block;width: 100%;height: 100%;position: relative}
+#station .tab_btn button:after{content:"" ;position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.27);opacity: 0;background: rgba(0, 0, 0, 0.31)}
+#station .tab_btn button span{position: relative;padding: 10px 20px ;border: 1.5px solid #fff;color: #fff;top: -50px;transition: 1s all;opacity: 0;z-index: 60}
+#station .tab_btn button:hover span,#station .tab_btn button:focus span,#station .tab_btn.on li button span{top: 0;opacity: 1}
+#station .tab_btn button:hover:after,#station .tab_btn button:focus:after,#station .tab_btn.on li button:after{opacity: 1}
+
+#station #cnt2 .col1,#station #cnt4 .col1,#station #cnt5 .col1{background: rgba(0,0,0,0.61)}
+#station #cnt2 .area,#station #cnt4 .area{position: relative}
+#station #cnt2 .top_style{position: absolute;width: 100%;top: 30px;left: 0}
+#station #cnt2 .top_style h3{text-align: center;color: #fff;font-size: 25px;margin-bottom: 10px}
+#station #cnt2 .top_style ul {text-align: center}
+#station #cnt2 .top_style ul li{display: inline-block;margin: 5px 10px}
+#station #cnt2 .top_style ul li button{color: #fff}
+#station #cnt2 .top_style ul li.on button{color: #ffa500;font-weight: 700}
+#station #cnt2 .bottom_style{height: 300px;padding: 100px 0 50px}
+#station #cnt2 .bottom_style>div {position: absolute;top: 120px;left: 0;height: 300px;overflow-y: auto;display: none;width: 100%;color: #d8d8d8}
+#station #cnt2 .bottom_style>div:first-child {display: block}
+#station #cnt2 .bottom_style>div>ul>li {height: 200px;width: 80%;margin: 0 auto 30px;padding-left: 180px;box-sizing: border-box;position: relative;padding-right: 200px}
+#station #cnt2 .bottom_style>div>ul>li .bg{height: 100%;width: 150px;background: no-repeat center;background-size: cover;position: absolute;left: 0;top: 0}
+#station #cnt2 .bottom_style>div>ul>li strong{font-size: 20px;margin-bottom: 10px;display: block} 
+#station #cnt2 .bottom_style>div>ul>li .menu_box{position: absolute;right: 0;top:50%;width: 150px;height: 100%;margin-top: -75px} 
+#station #cnt2 .bottom_style>div>ul>li .menu_box>span{display: block;text-align: center;font-weight: 700;margin-bottom: 20px}
+#station #cnt2 .bottom_style>div>ul>li .menu_box ul li:after{content: "";clear: both;display: block}
+#station #cnt2 .bottom_style>div>ul>li .menu_box ul li{margin-bottom: 15px;font-size: 14px}
+#station #cnt2 .bottom_style>div>ul>li .menu_box ul li span:first-child{float: left}
+#station #cnt2 .bottom_style>div>ul>li .menu_box ul li span:last-child{float: right}
+#station #cnt2 .bottom_style>div>ul>li>span{display: block;font-size: 12px;margin: 5px 0}
+#station #cnt2 .bottom_style>div>ul>li>p{margin-bottom: 10px;font-size: 14px;height: 80px}
+#station #cnt2 .bottom_style>div button{color: #ffa500;padding-right: 30px;height: 20px;position: relative}
+#station #cnt2 .bottom_style>div>ul>li>button:after{content: "";position: absolute;width: 20px;height: 20px;background: url("../img/common/icon_poto.png") no-repeat ;top: 2px;right: 0;background-size: cover}
+#station #cnt2 .bottom_style>div .poto_list{position: fixed;width: 400px;height: 100px;background: rgb(255, 255, 255) no-repeat center top;top: 50%;left: 50%;margin: -300px 0 0 -200px;padding-top: 500px;text-align: center;background-size: auto 480px;display: none;z-index: 99}
+#station #cnt2 .bottom_style>div .poto_list li{display: inline-block;width: 70px;height: 70px}
+#station #cnt2 .bottom_style>div .poto_list li button{display: block;width: 70px;height: 70px;background-size: cover;background: no-repeat center;opacity: 0.5}
+#station #cnt2 .bottom_style>div .poto_list li.on button{opacity: 1}
+#station #cnt2 .bottom_style>div .pt_cl{position: fixed;z-index: 99;width: 30px;height: 30px;text-indent: -9999px;background: url("../img/common/clbtn3.png") no-repeat;background-size: 30px;top: 20%;left: 50%;margin-left: 150px}
+#station #cnt2 .bottom_style>div .pt_cl:after{display: none;}
+
+
+#station .tab_list{display: none}
+#cnt3.modalin{z-index: 99!important}
+#station #cnt3 .tab_list ul li{position: fixed;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.91);top: 0;left: 0;z-index: 100;display: none}
+#station #cnt3 .tab_list ul li.on{display: block}
+#station #cnt3 .tab_list .modal{position: absolute; height: 400px;width: 800px;background: #fff;left: 50%;margin-left: -400px;top: 50%;margin-top: -200px;z-index: 90}
+#station #cnt3 .tab_list .modal .tab_bg{width: 400px;height: 400px;float: left;background-size: cover;background:  no-repeat center}
+#station #cnt3 .tab_list .list1 .modal .tab_bg{background-image: url("../img/station/cnt3_icon1.PNG")}
+#station #cnt3 .tab_list .list2 .modal .tab_bg{background-image: url("../img/station/cnt3_icon2.PNG")}
+#station #cnt3 .tab_list .list3 .modal .tab_bg{background-image: url("../img/station/cnt3_icon3.PNG")}
+#station #cnt3 .tab_list .list4 .modal .tab_bg{background-image: url("../img/station/cnt3_icon4.PNG")}
+#station #cnt3 .tab_list .list5 .modal .tab_bg{background-image: url("../img/station/cnt3_icon5.PNG")}
+#station #cnt3 .tab_list .modal .tab_txt{float: left;height: 400px;width: 400px;box-sizing: border-box;padding: 30px 20px}
+#station #cnt3 .tab_list .modal .tab_txt h4{text-align: center;padding-bottom: 20px}
+#station #cnt3 .tab_list .modal .tab_txt p{height: 150px;margin-bottom: 40px;overflow: auto;font-size: 14px;line-height: 20px}
+#station #cnt3 .tab_list .modal .tab_txt p br{line-height: 200%}
+#station #cnt3 .tab_list .modal .tab_txt span{font-size: 12px;line-height: 14px;display: block}
+#station #cnt3 .tab_list .modal .tab_txt a{display: block;font-size: 14px;margin-top: 20px}
+#station #cnt3 .tab_list .modal .tab_txt button{width: 20px;height: 20px;position: absolute;top: 10px;right: 10px;text-indent: -9999px;background: url("../img/common/clbtn.png") no-repeat ;background-size: cover}
+
+
+#station #cnt4 .col1 {padding: 80px 0 70px;height: 300px}
+#station #cnt4 .col1 .area {height: 100%}
+#station #cnt4 .col1 .area h3{position: absolute;width: 100%;text-align: center;color: #FFF;top: -50px;;font-size: 25px;}
+#station #cnt4 .col1 .event {width: 100%;position: relative;height: 300px}
+#station #cnt4 .col1 .event ul {width: 100%;text-align: center}
+#station #cnt4 .col1 .event ul li{display: inline-block;background: no-repeat left center;background-size: 300px auto;width: 300px;padding-left: 300px;height: 300px;vertical-align: middle}
+#station #cnt4 .col1 .event ul li:first-child{background-image: url("../img/station/Shinchon/event1.PNG");margin-right: 5%}
+#station #cnt4 .col1 .event ul li:last-child{background-image: url("../img/station/Shinchon/event2.PNG")}
+#station #cnt4 .col1 .event > a{position: absolute;width: 150px;right: 0;left: 0;bottom: -50px;margin: 0 auto;color: #fff;font-weight: 700;text-align: center}
+#station #cnt4 .col1 .event li {position: relative}
+#station #cnt4 .col1 .event li strong{padding: 10px 0;color: #fff;display: block;font-weight: 700}
+#station #cnt4 .col1 .event li p{font-size: 14px;line-height: 1.3;padding-bottom: 20px;color: #dbdbdb;padding: 10px;text-align: left}
+#station #cnt4 .col1 .event li em{display: none}
+#station #cnt4 .col1 .event li span{display: block;padding-left: 20px;box-sizing: border-box;font-size: 12px;margin-bottom: 10px;color: #aaa;text-align: left}
+#station #cnt4 .col1 .event li a{position: absolute;right: 10px;bottom: 0px;color: #ffa500}
+
+#station #cnt5 .col1 {height: 400px;padding: 40px}
+#station #cnt5 .col1 .area {height: 100%}
+#station #cnt5 .col1 .area .txt{float: left;height: 300px;padding: 100px;transition: 1s all}
+#station #cnt5.on .col1 .area .txt{margin-left: 10%}
+#station #cnt5 .col1 .area .txt h3{font-weight: 700;font-size: 35px;color: #fff;padding-bottom: 30px;font-family: "NS_G"}
+#station #cnt5 .col1 .area .txt span{font-size: 20px;color: #eaeaea}
+#station #cnt5 .col1 .area .txt strong{display: block;font-size: 16px;color: #ffa500;margin: 20px 0}
+#station #cnt5 .col1 .area .txt ul {text-align: center}
+#station #cnt5 .col1 .area .txt ul li{display: inline-block;font-size: 13px;margin: 0 5px;color: #aeaeae}
+#station #cnt5 .col1 .area #map{width: 400px;height: 100%;float: right;transition: 1s all}
+#station #cnt5.on .col1 .area #map{margin-right: 15%}
+
+#modalBtn {position: fixed;width: 100%;top: 49%;height: 60px;background:no-repeat;left: 0;z-index: 120}
+#modalBtn button{height: 100%;width: 40px;text-indent: -9999px}
+#modalBtn button:first-child{margin-left: 12%;background-image: url("../img/common/prevbtn.png")}
+#modalBtn button:nth-child(2){margin-right: 12%;background-image: url("../img/common/nextbtn.png");float: right}
+
+/* guide*/
+
+#guide{background: #fff;transition: 1s all}
+#guide #content #mainLine #mainMask{width: 10px;height: 100%;bottom: 0;background: #f7f7f7;position: absolute;left: 50%;margin-left: -5px;}
+#guide #content #mainLine{position: absolute;bottom: 0;height:100%;border-left: 5px dashed #222633;border-right: 5px dashed #222633;left: 50%;margin-left: -5px}
+
+
+#guide #header.on #menuBtn,#stationMenu #menuBtn{color: #222633;border-color: #222633}
+#guide #content {position: relative;background: #f7f7f7}
+#guide #content article{padding: 200px 0 200px;position: relative;overflow: hidden}
+#guide #content #cnt1{margin-top:50px}
+#guide #content #cnt6{padding-bottom: 100px}
+#guide #content article .area:after{content: "";display: block;clear: both}
+#guide #content article .parallax_txt{width: 40%;margin: 0 auto}
+#guide #content .header_view{background: url("../img/guide/list1/titbg.jpg") no-repeat center;position: relative;z-index: 60;padding: 200px 0;height: 30px;background-size: cover}
+#guide #content h2{font-size: 40px;text-align: center;color: #fff;transition: 1s all;font-family: "NS_G"}
+#guide #content .header_view .area{position: relative}
+#guide #content .header_view .utile{position: absolute;left: 5%;bottom: -180px;color: #d9d9d9}
+#guide #content .header_view .utile .maker{margin-right: 10px}
+#guide #content .header_view #linkCopy{position:absolute;right:5%;bottom: -180px}
+#guide #content article h3{margin: 100px 0 200px;font-size: 27px;text-align: center;color: #000;background: #f7f7f7;padding: 10px 0}
+#guide #content #cnt1 .parallax_txt,#guide #content #cnt6 .parallax_txt{margin: 0 auto}
+#guide #content article .parallax_bg{position: relative;width: 40%;height: 400px;background-size: cover;background: no-repeat center;transition: 1s all;opacity: 0;height: 600px}
+#guide #content article.on .parallax_bg{opacity: 1}
+#guide #content #cnt2 .parallax_bg{background-image: url("../img/guide/list1/cnt2bg.jpg")}
+#guide #content #cnt3 .parallax_bg{background-image: url("../img/guide/list1/cnt3bg.jpg")}
+#guide #content #cnt4 .parallax_bg{background-image: url("../img/guide/list1/cnt4bg.jpg")}
+#guide #content #cnt5 .parallax_bg{background-image: url("../img/guide/list1/cnt5bg.jpg")}
+#guide #content #cnt2 .parallax_txt,#guide #content #cnt4 .parallax_txt{float: right;right: -5%}
+#guide #content #cnt2 .parallax_bg,#guide #content #cnt4 .parallax_bg{float: left;left: -5%}
+#guide #content #cnt2.on .parallax_bg,#guide #content #cnt4.on .parallax_bg{left: 0%}
+#guide #content #cnt2.on .parallax_txt,#guide #content #cnt4.on .parallax_txt{right: 0%}
+#guide #content #cnt3 .parallax_txt,#guide #content #cnt5 .parallax_txt{float: left;left: -5%}
+#guide #content #cnt3 .parallax_bg,#guide #content #cnt5 .parallax_bg{float: right;right: -5%}
+#guide #content #cnt3.on .parallax_bg,#guide #content #cnt5.on .parallax_bg{right: 0%}
+#guide #content #cnt3.on .parallax_txt,#guide #content #cnt5.on .parallax_txt{left: 0%}
+#guide #content #cnt1 .parallax_txt,#guide #content #cnt6 .parallax_txt{background: #000}
+#guide #content article .parallax_txt{padding: 70px 30px;background: rgba(0, 0, 0, 0.84);color: #222633;position: relative;z-index: 90px;opacity: 0;transition: 1s all;box-sizing: border-box}
+#guide #content article.on .parallax_txt{opacity: 1}
+#guide #content article .parallax_txt p {line-height: 1.5;text-align: left;margin-bottom: 20px;color: #fff;font-size: 15px;font-family: "NS_O";font-weight: 700;letter-spacing: 2px}
+#guide #content article .parallax_txt span{float: left;margin: 0 5px;font-size: 14px;color: #9f9f9f;line-height: 20px}
+#guide #content article .parallax_txt a{float: right;color: #ffa500;font-weight: 700;line-height: 20px;padding-right: 30px;position: relative;margin-top: 10px}
+#guide #content article .parallax_txt a span{height: 20px;width: 20px;position: absolute;right: 0;top: 0;background: #fff;border: 3px solid #ffa500;box-sizing: border-box;border-radius: 100%;overflow: hidden}
+#guide #content article .parallax_txt a span:after{content: "";position: absolute;border-left: 5px solid #ffa500;border-top: 5px solid transparent;border-bottom: 5px solid transparent;top: 50%;margin-top: -5px;left: 50%;margin-left: -2.5px}
+#guide #content article .parallax_txt a:hover span:after,#guide #content article .parallax_txt a:focus span:after{animation: btnmove 1s  0s infinite normal}
+#linkCopy{color: #ffa500;font-weight: 900}
+#guide .footbg{width: 100%;height: 100px;background: #222633;position: relative;z-index: 60}
+/*#guide #content #cnt1 .parallax_txt p{padding: 15px 30px}*/
+@media all and (max-width:1600px) {
+    #station #cnt1 .col2 {margin-left: 0%}
+    #station #cnt1 .col2 p {font-size: 14px}
+    #station #cnt1 .area{margin: 0 3%}
+    #station #cnt1 .col2 > ul{position: fixed;right: 6%}
+}
+@media all and (max-width:1550px) {
+    #station #cnt4 .col1 .event {width: 100%;position: relative;height: 300px}
+    #station #cnt4 .col1 .event ul li{padding-left: 0;position: relative;margin: 0 5%}
+    #station #cnt4 .col1 .event ul li:before{content: "";top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.89);position: absolute}
+    #station #cnt4 .col1 .event ul li *{z-index: 99;position: relative}
+    #station #cnt5.on .col1 .area .txt{margin-left: 0%}
+    #station #cnt5.on .col1 .area #map{margin-right: 0%}
+
+}
+@media all and (max-width:1200px) {
+    #station #cnt1 .col1{float: none;padding-top: 0px;margin-right: 2%;right: -5%;margin-bottom: 2%}
+    #station #cnt1 .col1:after{content: "";clear: both;display: block}
+    #station #cnt1 .col1 *{text-align: center;float: left;font-size: 20px;margin-right: 10px}
+    #station #cnt1 .col1 span{padding: 0;font-weight: 700}
+    #station #cnt1 .col1>span{font-size: 16px;font-family: "NS_O";line-height: 23px}
+    #station #cnt1.on .col2{float: none;width: 100%;box-sizing: border-box}
+    
+    #stationMenu article ul li{width: 20%;float: left;height: 100px;line-height: 100px;text-align: center;position: relative;margin-bottom: 1px}
+    #stationMenu article ul li a{font-size: 17px}
+
+
+}
+
+@media all and (max-width:1224px) {
+    #station #cnt5 .col1 {height: 400px;padding:90px 0 20px}
+    #station #cnt5 .col1 .area {height: 100%}
+    #station #cnt5 .col1 .area .txt{position: absolute;height: auto;padding: 0;top: 10px}
+    #station #cnt5.on .col1 .area .txt{margin-left: 10%}
+    #station #cnt5 .col1 .area .txt *{float: left}
+    #station #cnt5 .col1 .area .txt h3{font-size: 20px;padding-bottom: 0;margin-right: 10px}
+    #station #cnt5 .col1 .area .txt span{font-size: 16px;line-height: 20px}
+    #station #cnt5 .col1 .area .txt strong{margin:  0;position: absolute;bottom: -20px;left: 0}
+    #station #cnt5 .col1 .area .txt ul{position: absolute;bottom: -40px;left: 0px}
+    
+    #station #cnt5 .col1 .area #map{width: 100%;float: none}
+    #station #cnt5.on .col1 .area #map{margin-right: 0%}
+}
+
+@media all and (max-width:1024px) {
+    #station #cnt1 .col2 > ul li button {position: relative;color: #fff}
+    #station #cnt1 .col2 > ul li button span{opacity: 1;left: 0;position: absolute;bottom: -17px;left: 0px}
+    #modalBtn button:first-child{margin-left: 5%}
+    #modalBtn button:nth-child(2){margin-right: 5%}
+    #stationMenu article ul{padding: 0 2%;box-sizing: border-box}
+}
+
+@media all and (max-width:765px) {
+    #station #cnt1 .col1{padding-top: 10px}
+    #station #cnt1 .col1 *{font-size: 14px}
+    #station #cnt1 .col1>span{font-size: 12px;display: none}
+    #station #cnt1 .col2{padding: 5% 12.5px 70px;position: relative}
+    #station #cnt1 .col2 > ul{position: static;width: 100%}
+    #station #cnt1 .col2 >a{position: absolute;bottom: 0}
+    #station #cnt1 .col2 p{margin-bottom: 20px;letter-spacing: 0}
+    #station #cnt1 .col2 p span{margin-top: 30px}
+    #station #cnt1 .col2 p span:first-child{margin-bottom: 20px;margin-top: 0}
+    #station #cnt1 .col2 > ul{text-align: center}
+    #station #cnt1 .col2 > ul li {width: 60px;height: 45px}
+    #cnt3 #tabPrev,#cnt3 #tabNext{display: none}
+    
+    #station #cnt2 .top_style h3{text-align: center;color: #fff;font-size: 25px;margin-bottom: 10px}
+    #station #cnt2 .top_style ul li{margin: 2.5px 5px}
+    #station #cnt2 .top_style ul li button{color: #fff}
+    #station #cnt2 .bottom_style>div>ul>li {height: auto;width:100%;padding: 0 10px 20px;position: relative}
+    #station #cnt2 .bottom_style>div>ul>li:after{content: "";width: 90%;height: 1px;background: #b2b2b2;bottom: 0;left:0;margin-left: 5%; position: absolute}
+    #station #cnt2 .bottom_style>div>ul>li .bg{display: none}
+    #station #cnt2 .bottom_style>div>ul>li .menu_box{position: static;width: 100%;height: auto;margin-top: 0;padding-top: 20px} 
+    #station #cnt2 .bottom_style>div>ul>li>p{height: auto;margin-bottom: 35px}
+    
+    #station #cnt2 .bottom_style>div .poto_list{position: fixed;width: 100%;height: 100px;top: 50%;left: 0;margin: -220px 0 0 0;padding-top: 340px;text-align: center;background-size: auto 300px}
+    #station #cnt2 .bottom_style>div .pt_cl{position: fixed;z-index: 99;top: 50%;right: 0;margin-left: 0px;left: 5%;margin-top: -180px}
+    
+    #station .tab_box{overflow: auto}
+    #station #cnt3 .tab_list .modal{position: absolute; height: 100%;width: 100%;left:0;margin-left: 0px;top: 0;margin-top:0px}
+    #station #cnt3 .tab_list .modal .tab_bg{width: 100%;height: 50%;float: none}
+    #station #cnt3 .tab_list .modal .tab_txt{float: none;height: 45%;width: 100%;padding: 10px 10px}
+    #station #cnt3 .tab_list .modal .tab_txt p{height: 55%;margin-bottom: 2%;line-height: 1.5}
+    #station #cnt3 .tab_list .modal .tab_txt a{margin-top: 2%}
+    #modalBtn {top:25%;margin-top: -30px}
+    #modalBtn button:first-child{margin-left: 2%}
+    #modalBtn button:nth-child(2){margin-right: 2%}
+    #station #cnt3 .tab_list .modal .tab_txt button{background-image: url("../img/common/clbtn2.png")}
+    
+    #station #cnt4 .col1{ height: 400px;padding: 80px 0 60px;}
+    #station #cnt4 .col1 .area {height: 400px}
+    #station #cnt4 .col1 .event {height: 400px}
+    #station #cnt4 .col1 .area h3{font-size: 18px}
+    #station #cnt4 .col1 .event ul li{float: none;height: 200px;width: 100%;margin: 0;position: relative;background: rgba(0, 0, 0, 0.09)!important}
+    #station #cnt4 .col1 .event ul li:before{content: "";top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.89);position: absolute}
+    #station #cnt4 .col1 .event li p{display: none}
+    #station #cnt4 .col1 .event> a{bottom: -20px}
+    #station #cnt4 .col1 .event li a{position: absolute}
+    #station #cnt4 .col1 .event li em{display: block;font-style: normal;color: #bebebe;line-height: 1.5;font-size: 14px;padding: 5px 20px 10px;text-align: left;}
+    
+    #stationMenu #content{padding-bottom: 50px}
+    #stationMenu #content h2{text-align: center}
+    #stationMenu article{padding: 50px 0;text-align: center}
+    #stationMenu article h3{display: inline-block;padding: 10px 30px}
+    #stationMenu article ul{text-align: center}
+    #stationMenu article ul li{width: auto;float: none;height: 30px;line-height:30px;display: inline-block;margin-bottom: 20px}
+    #stationMenu article ul li a{font-size: 14px;line-height: 30px;padding: 0 20px;border-radius: 20px}
+    
+    #station {background-position: 10% center}
+    #station #footer {display: none}
+    #station #pageMove *{width: 40px;height: 40px}
+    #station #nextBtn{left: 0}
+    #station #prevBtn{bottom: 50px}
+    
+    
+    #station #location{bottom: 30px}
+    #station #pageMove {bottom: 30px}
+    
+    #station #footer #topBtn{top: 120px}
+    #station #footer #topBtn:after{border-bottom-color: #fff}
+    #station #footer #topBtn{color: #fff}
+    #station #footer {background: #222633;color: #fff}
+    #station #footer .col2{top: 100px}
+    #station #footer .col2 button{color: #fff}
+    #station #footer .col2 ul{background: #222633}
+    #station #footer .col2 ul li{background: #222633}
+    #station #footer .area {padding-top: 80px}
+    #footer .col1 li{margin: 5px}
+    #station #footer{width: 100%;height: 100%;padding: 0}
+    
+    /* guide*/
+
+    #guide #content article{margin: 100px 0 100px}
+    #guide #content article .parallax_txt{width: 100%}
+    #guide #content .header_view .utile{bottom: -150px}
+    #guide #content .header_view #linkCopy{bottom: -150px}
+    #guide #content article h3{margin: 50px 0 100px}
+    #guide #content article .parallax_bg{position: relative;width: 40%;height: 400px;background-size: cover;background: no-repeat center;transition: 1s all;opacity: 0;height: 600px}
+    #guide #content article.on .parallax_bg{opacity: 1}
+    #guide #content article .parallax_txt{float: none!important;left:0!important;right: 0!important;position: relative;z-index: 80}
+    #guide #content article .parallax_bg{float: none!important;right: 0!important;position: absolute;margin: 0 auto;left: 0!important;top: 120px;width: 100%;height: 100%}
+    #guide #content #cnt6{padding-bottom: 100px}
+    #guide #content #cnt3 .parallax_bg{top: 125px}
+    #guide #content #cnt4 .parallax_bg{top: 100px}
+    #guide #content #cnt5 .parallax_bg{top: 150px}
+    #guide #content article .parallax_txt{padding: 100px 30px;background: rgba(0, 0, 0, 0.84);color: #222633;position: relative;z-index: 90px;opacity: 0;transition: 1s all;box-sizing: border-box}
+    #guide #content article .parallax_txt p {line-height: 1.5;text-align: left;margin-bottom: 20px;color: #fff;font-size: 15px;font-family: "NS_O";font-weight: 700}
+    #guide #content article .parallax_txt span{float: left;margin: 0 5px;font-size: 14px;color: #666;line-height: 20px}
+    #guide #content article .parallax_txt a{float: right;color: #ffa500;font-weight: 700;line-height: 20px;padding-right: 30px;position: relative;margin-top: 10px}
+    #guide #content article .parallax_txt a span{height: 20px;width: 20px;position: absolute;right: 0;top: 0;background: #fff;border: 3px solid #ffa500;box-sizing: border-box;border-radius: 100%;overflow: hidden}
+    #guide #content article .parallax_txt a span:after{content: "";position: absolute;border-left: 5px solid #ffa500;border-top: 5px solid transparent;border-bottom: 5px solid transparent;top: 50%;margin-top: -5px;left: 50%;margin-left: -2.5px}
+    #guide #content article .parallax_txt a:hover span:after,#guide #content article .parallax_txt a:focus span:after{animation: btnmove 1s  0s infinite normal}
+    #linkCopy{color: #ffa500;font-weight: 900}
+    #guide .footbg{width: 100%;height: 100px;background: #222633;position: relative;z-index: 60}
+
+    
+    
+    
+}
+@media all and (max-width:360px) {
+    #station #cnt5 .col1 .area .txt ul li{display: none}
+    #station #cnt5 .col1 .area .txt ul li:nth-child(-n+4){display: block}
+
+}
+@media all and (max-height:600px) {
+    #station #cnt5 .col1 {height: 300px;padding:90px 0 20px}
+    
+    #station #cnt4 .col1 .event ul li {height: 180px}
+    #station #cnt4 .col1 .event> a {bottom: 10px}
+    #station #cnt4 .col1 .area h3{padding-top: 20px}
+}
+@keyframes btnmove{
+    0%{left: 0%}
+    100%{left: 100%}
+}
+

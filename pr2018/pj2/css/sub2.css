@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/*************************TOP botton****************************/
+#top_bt{position:fixed;right: 180px;bottom: 100px}
+
+/************************************************************* room */
+
+h2{font-size: 25px}
+h3{font-size: 40px}
+body{background-color:#fffff8}
+
+.clear:after{content: "";display: block;clear: both}
+/*****************************wrap1(배너)*********************************/
+#wrap1{height:351px;background:url("../images/room/sub_banner.jpg") no-repeat fixed center top;margin-bottom:90px}
+/*****************************wrap2(슬라이더)*********************************/
+#wrap2 #wh{margin:0 85px 34px;text-align: center;font-size: 28px}
+#wrap2{height:700px;margin:0 200px}
+#wrap2 .visual,#wrap2 .visual li, #wrap2 .visual li a, #wrap2 .visual li a img{width:1000px;height:500px;}
+#wrap2 .visual{position:relative;overflow:hidden}
+#wrap2 .visual li {position:absolute;top:0;left:100%;text-align:center}
+#wrap2 .visual li:first-child{left:0}
+
+/*****************************인디케이터*********************************/
+#ind{width: 195px;margin:26px auto 0}
+#ind ul li{margin-left:10px;width:22px;height: 22px;float:left}
+#ind ul li button{width:18px;height:18px;border:1px solid #3a3a3a;border-radius:9px;-webkit-border-radius:9px;-moz-border-radius:9px;margin: 2px;transition:all 0.2s}
+#ind ul li #btn1{margin-left:0}
+#ind span{font-size:0;text-indent:-9999px;top:-9999px}
+#ind ul li button:focus, #ind ul li button:hover{width:22px;height:22px;border-radius:11px;-webkit-border-radius:11px;-moz-border-radius:11px;margin: 0}
+#ind ul li.on button{background:#3a3a3a;width:22px;height:22px;border-radius:11px;-webkit-border-radius:11px;-moz-border-radius:11px;margin: 0}
+
+/*********************************시작 정지 버튼**************************************/
+#ps{padding-top:-20px;width:200px;height:22px;color:3a3a3a;margin: 0 auto}
+#ps .play, #ps .stop{width:50px;height:22px;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;background:#ffdcad;line-height:1px;margin-left: 10px}
+#ps .play:hover,#ps .play:focus, #ps .stop:hover, #ps .stop:focus{background:#3a3a3a;color:#fff;font-weight:700;transition:all 0.3s;width:52px;height:24px;line-height:3px;border-radius:6px;-webkit-border-radius:6px;-moz-border-radius:6px}
+#ps button{display:none}
+#ps button.on{display:inline-block}
+
+/*****************************wrap3(글씨)*********************************/
+#wrap3{margin-left:300px;text-align:left;padding-bottom:15px}
+#wrap3 p {margin-top: 10px}
+
+/*****************************wrap4(기본규칙)*********************************/
+#wrap4{width:800px;height:400px;background:#ffde9f;margin:0 300px}
+#wrap4 ul li{float:left;width:400px;height:200px;box-sizing: border-box}
+#wrap4 ul li:first-child,#wrap4 ul li:nth-child(3){border-right:1px solid #333}
+#wrap4 ul li:first-child,#wrap4 ul li:nth-child(2){border-bottom:1px solid #333}
+#wrap4 ul li>button{width: 100%;height: 100%;display: block;transition: 1s all}
+#wrap4 ul li img{width:100px;height:100px;margin: 0 auto}
+#wrap4 ul li button p{text-align: center;margin-top: 20px;height: 30px;line-height: 30px;font-weight: 700}
+#wrap4 ul li>button:hover,#wrap4 ul li>button:focus{background: rgba(255, 255, 255, 0.51);letter-spacing: 2px;font-size: 15px;color: #666}
+
+/*****************************wrap5_1(글씨)*********************************/
+#wrap5{margin-top:150px;margin-bottom: 41px;background: #ffde9f}
+#wrap5 h2{text-align: center;font-size: 45px;margin-bottom: 50px;padding-top: 50px}
+#wrap5 p{text-align: center;padding-bottom: 50px;font-size: 20px;font-weight: 700}
+/*************************wrap6(이미지+글씨 제어)****************************/
+#wrap6 {margin-bottom: 200px}
+#wrap6 > ul > li{height: 400px;padding-top: 164px;font-size:20px;position: relative}
+#wrap6 > ul > li:first-child div{padding-top: 0;top:70px;left:300px;right: 0; margin: 0 auto;width: 600px}
+#wrap6 > ul > li:first-child li{text-indent: 20px}
+#wrap6 > ul > li:nth-child(2) div{top:120px;left:0px;right:100px; margin: 0 auto;width: 500px}
+#wrap6 > ul > li:nth-child(2) h3{text-align: left;text-indent: 40px;margin-top: 20px}
+#wrap6 > ul > li > img{position: relative;z-index: 70}
+#wrap6 > ul > li:nth-child(2) li {text-align: left;text-indent: 20px}
+#wrap6 > ul > li:nth-child(2) ul {padding-left: 20px}
+#wrap6 > ul > li:nth-child(3) div{top: 100px;left: 200px;right: 0;width: 500px;margin: 0 auto}
+#wrap6 > ul > li:nth-child(3) div li{text-indent: 25px}
+
+#wrap6 > ul > li:nth-child(4) div{bottom:-100px;right: 200px;left: 0;width: 400px;margin: auto}
+#wrap6 > ul > li:nth-child(4) li{text-align: left;text-indent: 20px;margin-left: 20px}
+#wrap6 > ul > li:nth-child(4) h3{text-align: left;margin-left: 30px}
+#wrap6 > ul > li:nth-child(4) img{margin-right: 100px}
+
+#wrap6 > ul > li > img,#wrap6 > ul > li > div{float:left}
+#wrap6 > ul > li:nth-child(even) > img,#wrap6 > ul > li:nth-child(even) > div{float:right;text-align:right}
+#wrap6 > ul > li > div{padding-left: 85px;border: 5px solid #333;position: absolute}
+#wrap6 > ul > li:nth-child(even) > div{padding-left: 0px;padding-right: 85px;}
+#wrap6 > ul > li > div h3{font-size:40px;margin-bottom: 40px;margin-top: 30px}
+#wrap6 img{width:570px;height:400px}
+#wrap6 > ul > li > div ul{width:100%}
+#wrap6 > ul > li > div ul:after{content: "";clear: both;display: block}
+#wrap6 > ul > li > div ul li{float: left;width: 50%;margin-top:20px;position: relative}
+#wrap6 > ul > li > div ul li:after{width: 5px;height: 5px;border-radius: 2.5px;background: #333;content: "";position: absolute;top: 50%;left:0;margin-top: -2.5px}
+#wrap6 > ul > li > div ul li:last-child{float: left;width: 350px;margin-bottom:20px}
+
+
+
+
+
+/* notice sub */
+#notice51 #content{height: 900px;width: 100%;min-width: 1400px}
+#notice51 #content h2{width: 400px;height: 400px;position:relative;font-size:45px;margin:150px 0 0 0px}
+#notice51 #content h2, #notice51 #content .wrap{float:left}
+#notice51 #content h2 span{position:absolute;top: -150px;display:none}
+#notice51 #content h2 .txt1{left: 18px;}
+#notice51 #content h2 .txt2{left: 118px;}
+#notice51 #content h2 .txt3{left: 218px;}
+#notice51 #content h2 .txt4{left: 318px;}
+#notice51 #content .wrap{width: 900px;margin:0 0 0 100px}
+#notice{width:900px;border-top:1px solid #aaa}
+#notice caption{font-size:1px;top:-9999px;left:-9999px;text-indent:-9999px;padding:30px}
+#notice thead tr th{background:#eef6f6;height:74px}
+#notice .w1{width:110px}
+#notice .w2{width:170px}
+#notice .w3{width:160px}
+#notice .w4{width:440px}
+#notice tbody tr td{border-bottom:1px solid #ccc;height:78px;text-align:center}
+#notice tbody tr.left_align td, #notice tbody tr td.left_align{text-align:left}
+
+#notice tbody tr.on td, #notice tbody tr.left_align td{background:rgb(196, 253, 255)}
+#notice tbody tr.left_align{display:none}
+#notice tbody tr.left_align td{height:auto;padding:20px;line-height:2}
+.page{padding:30px;text-align: center;}
+.page *{vertical-align: bottom}
+.page .actived{font-size: 47px;font-weight: 700;position: relative;top: 10px}
+.page a:hover, .page a:focus{border-bottom: 1px solid #7c7c7c}
+.page a img{width: 16px; height: 22px}
+
+#fish1{background: url("../images/service/icon_01_fish.gif") no-repeat;width:93px;height:39px;position: absolute;top: 450px;left:100px}
+#fish2{background: url("../images/service/icon_02_slowFish.gif") no-repeat;width:62px;height:19px;position:absolute;top:470px;left:220px}
+/**************************** footer ****************************/
+#footer{border-top: 1px solid #3a3a3a;width: 100%;font-size: 12px;text-align: center;padding-top:25px;padding-bottom: 20px;line-height: 1.5;font-weight: 700}

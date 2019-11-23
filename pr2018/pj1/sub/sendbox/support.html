@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>지원창</title>
+    <!--[if lt IE 9 ]>
+          <script type="text/javascript" src="html5shiv.min.js></script>
+    <![endif]-->
+    <style type="text/css">
+        body,h1,h2,input,p{margin: 0;padding: 0;}
+        #minibox{width: 500px;height: 600px;background: url(../../img/common/background.gif) no-repeat 49% 80%;position: relative}
+        h1 {display: block;text-indent: -9999px;background:#3a3a3a url(../../img/common/title_logo.png)no-repeat;width:500px;height: 45px}
+        h2{color: #fff;position: absolute ;top:26px; right: 0;font-size: 13px}
+        .txtbox{width: 400px;height: 450px;margin: 0 auto;margin-top:10PX}
+        #txt{width: 400px ;height: 400px;margin: 5px auto 0px}
+        .sendbox{margin: 0 auto;width: 146px}
+        .sendbox input{border: 3px solid #111;background: none;line-height: 20px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;font-weight: bold;background: #fff;cursor: pointer;width: 64px;height: 30px;}
+        p{text-align: center;margin-top: 22px;font-weight:bold}
+        #select_qa{height:25px}
+    </style>
+</head>
+
+<body>
+    <div id="minibox">
+        <h1>로드컴플릿</h1>
+        <form action="#" id="" method="get" >
+            <header id="selectbox">
+            <h2>Q &amp; A : 의견 및 지원작성</h2>
+            <p>내용 작성란</p>
+            </header>
+            <div class="txtbox">
+                <select id="select_qa" name="select_qa">
+                    <option value="send1" selected="selected">사이트 문의</option>
+                    <option value="send2" >오류 신고</option>
+                    <option value="send3" >제품 문의</option>
+                    <option value="send4" >사업 아이디어</option>
+                </select>
+                <input type="text" id="txt" name="txt" placeholder="내용을 입력해주세요">
+            </div>
+            <div class="sendbox">
+                <input type="reset" clss="reset" value="취소하기">
+                <input type="submit" class="send" value="전송하기">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

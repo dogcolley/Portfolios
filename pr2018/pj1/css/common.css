@@ -1,0 +1,85 @@
+@charset "utf-8";
+@font-face{
+    font-family:"Nanum S";
+    src:url("../font/NANUMSQUAREL.eot");
+    src:local("※"),url("../font/NANUMSQUAREL") format("woff");
+    font-weight:200
+}
+@font-face{
+    font-family:"Nanum S";
+    src:url("../font/NANUMSQUARER.eot");
+    src:local("※"),url("../font/NANUMSQUARER") format("woff");
+    font-weight:400
+}
+@font-face{
+    font-family:"Nanum S";
+    src:url("../font/NANUMSQUAREB.eot");
+    src:local("※"),url("../font/NANUMSQUAREB") format("woff");
+    font-weight:700
+}
+@font-face{
+    font-family:"Nanum S";
+    src:url("../font/NANUMSQUAREEB.eot");
+    src:local("※"),url("../font/NANUMSQUAREEB") format("woff");
+    font-weight:900
+}
+
+body,ul,p,h1,h2,h3,h4,button{margin: 0px ;padding: 0px}
+body{font-family:"Naum S","Naum Gothic","나눔고딕","Malgun Gothic" , "맑은 고딕";font-weight: 400}
+address{font-style: normal}
+h1,h2,h3,h4{font-size: inherit}
+a{text-decoration: none}
+a:link,a:visited,a:hover,a:active{color: inherit}
+img{vertical-align: top;border: none}
+ul li{list-style: none}
+nav,header,section,aricle,aside,footer,caption{display: block}
+button{border: none;background: none}
+
+/* 공통 클레스*/
+.block{display: block}
+
+/* 전체 사이즈 */
+#wrap {max-width: 1960px;min-width: 1440px;margin: 0 auto;position: relative}
+
+/* skip nav */
+body{background: url("../img/common/background.gif") no-repeat bottom;}
+#skipnav a{position: absolute;left:-9999px}
+#skipnav a:focus{left: 0;padding:10px 0px;width:100%;text-align: center;background:#ffffff;font-weight: bold;z-index: 99}
+
+/* header's and nav*/
+#headerwrap{position: fixed;width: 100%;height:60px;background: #3a3a3a;z-index: 98}
+#header {position: relative;width: 1440px;margin: 0 auto}
+#header>h1>a{left: 60px;position: absolute;width: 250px;height: 45px;background:url(../img/common/title_logo.png) no-repeat;text-indent: -9999px}
+#header #gnb {font-size:18px;color: #fff;font-weight: 400;width:400px;margin-left:1000px}
+#header #gnb>ul>li{float:left}
+#header #gnb>ul>li:hover>a,#header #gnb>ul>li>a:focus{color: #ff0000;font-weight:700}
+#header #gnb>ul>li{margin-left: 40px}
+#header #gnb>ul{line-height: 60px}
+#header #gnb ul .m_0{margin:0px}
+#header #gnb ul li .deps2{position: absolute;background: #3a3a3a;top:60px;border-top: 3px solid #292729}
+#header #gnb ul .gnb3 .deps2{width: 150px}
+#header #gnb ul .gnb2 .deps2{width: 200px}
+#header #gnb ul li .deps2 ul li{margin-left: 15px}
+#header #gnb ul li .deps2 ul li a{padding-left: 10px;border-left: 3px solid #292729}
+#header #gnb ul li .deps2 ul li a:hover,#header #gnb ul li .deps2 ul li a:focus{border-left-color: #ff0000;color: #ff0000;font-weight:700}
+
+/* footer's*/
+#footer{position: fixed;bottom:0;z-index: 99;width: 100%;height: 70px;background: #292729;font-size: 12px;font-weight: 400;color: #ccc}
+#footer address{width: 1300px;margin: 0 auto}
+#footer address:after{display: block;clear: both;content:""}
+#footer address div{float: left}
+#footer address span{display: block}
+#footer address .number,#footer address .address {padding-top: 20px}
+#footer address .number span,#footer address span:first-child{margin-bottom: 5px}
+#footer address .number{width: 380px}
+#footer address .address{width: 540px;text-align: center}
+#footer address .addresslink{width: 380px;text-align: center}
+#footer address .addresslink ul:first-child{display: block;clear: both;content:""}
+#footer address .addresslink ul{height: 50px}
+#footer address .addresslink ul li a{float: left;text-indent: -9999px;height: 40px;width: 40px;background: url(../img/common/footer_icon.png) no-repeat;margin:10px 20px 0px 0px}
+#footer address .addresslink ul .icon1 a{background-position: 0 0;margin-left: 80px}
+#footer address .addresslink ul .icon2 a{background-position: -40px}
+#footer address .addresslink ul .icon3 a{background-position: -80px}
+#footer address .addresslink ul .icon4 a{background-position: -120px}
+#footer address .addresslink span{margin-top: 5px;font-size: 10px}
+

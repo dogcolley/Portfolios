@@ -1,0 +1,64 @@
+<div class="area">
+    <header>
+        <h2>몌뉴 목록</h2>
+        <ul>
+            <li>
+                <a href="#">객실 안내</a>
+                <ul>
+                    <li><a href="#">원룸 : 돌핀</a></li>
+                    <li><a href="#">투룸 : 오르카</a></li>
+                    <li><a href="#">VIP룸 : 웨일</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">이용 안내</a>
+                <ul>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">운영시간</a></li>
+                    <li><a href="#">편의시설</a></li>
+                    <li><a href="#">주차안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">주변 볼거리</a>
+                <ul>
+                    <li><a href="#">부산 12경</a></li>
+                    <li><a href="#">부산 야경 7선</a></li>
+                    <li><a href="#">먹거리 시장</a></li>
+                    <li><a href="#">추천 포토존</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">소통 서비스</a>
+                <ul>
+                    <li><a href="#">리조트 소식</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">Q &amp; A</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="/pr/pj2/reservation/reservation.html">예약하기</a></li>
+        </ul>
+    </header>
+    <footer>
+        <h2>리조트 정보</h2>
+        <dl>
+            <dt>주소</dt>
+            <dd><span>부산시 해운대구</span><span>송정구덕포길 130</span> 송정 웨일리조트</dd>
+        </dl>
+        <address>
+                    <strong>문의 번호</strong>
+                        <ul>
+                            <li><strong>T : </strong>02-37772-2100</li>
+                            <li><strong>F : </strong>010-3436-3622</li>
+                            <li><strong>E : </strong>jinji0326@naver.com</li>
+                        </ul>
+                        <strong>SNS</strong>
+                        <ul class="sns">
+                            <li><a href="https://www.facebook.com/kensingtonhnr/">페이스북</a></li>
+                            <li><a href="https://open.kakao.com/me/whaleResort">카카오톡</a></li>
+                        </ul>
+                    </address>
+    </footer>
+    <button type="button" id="btnMC">메뉴닫기</button>
+</div>
