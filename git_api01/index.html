@@ -8,9 +8,10 @@
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="./sass2/jmodule.css">
+    <link rel="stylesheet" href="./scss/jmodule.css">
 
     <style>
+        body{position:relative}
         #app{margin:0 auto;padding:50px 0;width: 100%;}
         #app > div{max-width:600px;width:100%;overflow: hidden;box-sizing: border-box;padding:0 1.5%;}
         #contributions_info ul.commitBox li{width:9.5px;height:9.5px;background:none;margin: 5px 2px 0 0;position: relative;float:left}
@@ -42,14 +43,16 @@
              #contributions_info ul.commitBox li:nth-child(21n + 1){clear: none;}
              #chUser input, #chUser button{height:50px}
         }
+        #footer{position:absolute;bottom:2%;left:0;text-align: right;width:100%;}
+        #footer p{max-width: 600px;text-align: right;margin:0 auto;padding:0 2.5%}
     </style>
 </head>
 <body class="T_ds_table T_ht_p100 U_mg_ct T_wd_full">
     
     <div id="app" class="T_ds_cell T_vt_md">
         <div class="U_mg_ct">
-            <h1 class="U_ft_fm05 T_ft_ct T_ft_rem30 U_ft_c000 T_mg_btm10">개밥의 인증감시기</h1> 
-            <p class="T_ft_ct T_mg_btm20 T_ft_rem12">죽기싫으면 인증하세요.</p>
+            <h1 class="U_ft_fm05 T_ft_ct T_ft_rem30 U_ft_c000 T_mg_btm10">Github 1일 1커밋 인증감시기</h1> 
+            <p class="T_ft_ct T_mg_btm20 T_ft_rem12">매일매일 인증하세요.</p>
 
             <form action="" v-on:submit="onSubmitForm" id="chUser" class="clear T_fl_Clt T_mg_top20 T_ft_rem15">
                 <input type="text" name="" id="" v-model="userName">
@@ -76,8 +79,12 @@
                     </li>
                 </ul>
             </div>
-
         </div> 
+        <footer id="footer">
+            <p>
+                made by dogcolley , distrbute by cafemug
+            </p>
+        </footer>
     </div>
 
     <script>
@@ -211,5 +218,5 @@
 	});
         
     </script>
-</body c>
+</body>
 </html>
